@@ -35,9 +35,8 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
-	// Create cookie secret so I can start app.
-	// This is a temporary fix; maybe add 'COOKIE_SECRET' to the .env file?
-	'cookie secret': '123456'
+	// App will not start without cookie secret
+	'cookie secret': process.env.COOKIE_SECRET || 'veteranready'
 
 });
 
