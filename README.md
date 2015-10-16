@@ -13,4 +13,4 @@ Or use nodemon to pick up changes in hbs files and js files:
 npm install -g nodemon
 nodemon keystone -e hbs,js
 
-Then go to the homepage.  Username and password should be user@keystone.js/admin
+Then go to the homepage.  Username and password should be user@keystonejs.com/admin
