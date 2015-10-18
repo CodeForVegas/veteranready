@@ -1,0 +1,14 @@
+.thumbnail {
+    position: relative;
+}
+
+.caption {
+    position: absolute;
+    top: 10%;
+    left: 22.5%;
+    width: 100%;
+}
+
+#homepage-text {
+  font-size: 2.5vw;
+}
