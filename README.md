@@ -1,16 +1,18 @@
-To create the database:
+## In this branch I'm going to be working on the templates and layouts for the site.
 
-tar -zxvf mongo.tgz
-mongorestore --db veteran-ready veteranMongo/
+## To create the database:
 
-To run:
+1. tar -zxvf mongo.tgz
+2. mongorestore --db veteran-ready veteranMongo/
 
-npm install
-node keystone
+## To run:
 
-Or use nodemon to pick up changes in hbs files and js files:
+1. npm install
+2. node keystone
 
-npm install -g nodemon
-nodemon keystone -e hbs,js
+## Or use nodemon to pick up changes in hbs files and js files:
 
-Then go to the homepage.  Username and password should be user@keystonejs.com/admin
+1. npm install -g nodemon
+2. nodemon keystone -e hbs,js
+
+## Then go to the homepage.  Username and password should be user@keystonejs.com/admin
