@@ -15,4 +15,4 @@
 1. npm install -g nodemon
 2. nodemon keystone -e hbs,js
 
-#### Then go to the homepage.  Username and password should be user@keystonejs.com/admin
+#### Then go to the homepage.  Username is user@keystonejs.com and password is admin.
