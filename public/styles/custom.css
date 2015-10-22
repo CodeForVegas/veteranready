@@ -1,14 +1,33 @@
+/* Custom Styles for the Homepage */
+
 .thumbnail {
-    position: relative;
+  position: relative;
 }
 
-.caption {
-    position: absolute;
-    top: 10%;
-    left: 22.5%;
-    width: 100%;
+.caption-upper {
+  position: absolute;
+  top: 10%;
+  left: 22.5%;
+  width: 100%;
+}
+
+.caption-middle {
+  position: absolute;
+  right: 15%;
+  bottom: 35%;
+  width: 100%;
+}
+
+.caption-lower {
+  position: absolute;
+  right: 15%;
+  bottom: 10%;
+  width: 100%;
 }
 
 #homepage-text {
   font-size: 2.5vw;
+  margin: 0px;
+  padding: 0px;
+  color: #000000;
 }
