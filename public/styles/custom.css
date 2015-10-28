@@ -1,4 +1,10 @@
-/* Custom Styles for the Homepage */
+/* Custom styles for all pages*/
+
+.jumbotron {
+  background-color: #f5f5f5; 
+}
+
+/* Custom styles for the Homepage */
 
 .thumbnail {
   position: relative;
