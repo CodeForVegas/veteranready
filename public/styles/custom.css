@@ -37,3 +37,25 @@
   padding: 0px;
   color: #000000;
 }
+
+/* Custom styles for the About page */
+
+.thumbnail.right-caption > img {
+    float: left;
+    margin-right: 9px;
+}
+
+.thumbnail.right-caption {
+    float: left;
+}
+
+.thumbnail.right-caption > .caption {
+    padding: 4px;
+}
+
+/* Custom styles for Events page */
+
+.btn-centered {
+  text-align: center;
+  display: block;
+}
