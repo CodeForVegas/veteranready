@@ -14,13 +14,13 @@ keystone.init({
 
 	'name': 'Veteran Ready',
 	'brand': 'Veteran Ready',
-	
+
 	'less': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'hbs',
-	
+
 	'custom engine': handlebars.create({
 		layoutsDir: 'templates/views/layouts',
 		partialsDir: 'templates/views/partials',
@@ -28,13 +28,15 @@ keystone.init({
 		helpers: new require('./templates/views/helpers')(),
 		extname: '.hbs'
 	}).engine,
-	
+
 	'emails': 'templates/emails',
-	
+
 	'auto update': true,
 	'session': true,
 	'auth': true,
-	'user model': 'User'
+	'user model': 'User',
+	// App will not start without cookie secret
+	'cookie secret': process.env.COOKIE_SECRET || 'veteranready'
 
 });
 
