@@ -36,7 +36,7 @@ keystone.init({
 	'auth': true,
 	'user model': 'User',
 	// App will not start without cookie secret
-	'cookie secret': process.env.COOKIE_SECRET || 'veteranready'
+	// 'cookie secret': process.env.COOKIE_SECRET || 'veteranready'
 
 });
 
