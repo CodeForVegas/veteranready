@@ -1,9 +1,12 @@
-#### To create the database:
+#### In this branch, I'll be building out the Resources page.
+
+#### The database has already been built, but just for reference ...
+#### To create the database, open a terminal, cd to the project directory, and type:
 
 1. tar -zxvf mongo.tgz
 2. mongorestore --db veteran-ready veteranMongo/
 
-#### To run, open a terminal, cd to project directory and type:
+#### To run, open a terminal, cd to the project directory, and type:
 
 1. npm install
 2. node keystone
