@@ -1,11 +1,9 @@
-#### In this branch I'm going to be working on the templates and layouts for the site.
-
 #### To create the database:
 
 1. tar -zxvf mongo.tgz
 2. mongorestore --db veteran-ready veteranMongo/
 
-#### To run:
+#### To run, open a terminal, cd to project directory and type:
 
 1. npm install
 2. node keystone
