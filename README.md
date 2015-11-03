@@ -1,5 +1,3 @@
-#### In this branch, I'll be building out the Resources page.
-
 #### The database has already been built, but just for reference...
 #### To create the database, open a terminal, cd to the project directory, and type:
 
