@@ -24,15 +24,16 @@ exports.initLocals = function(req, res, next) {
 	var locals = res.locals;
 
 	locals.navLinks = [
-		{ label: 'Home',		    key: 'home',		   href: '/' },
-		{ label: 'About',       key: 'about',      href: '/about'},
-		{ label: 'Services',    key: 'services',   href: '/services'},
-		{ label: 'Events',      key: 'events',     href: '/events'},
-		{ label: 'Resources',   key: 'resources',  href: '/resources'},
-		{ label: 'Contact',		  key: 'contact',		 href: '/contact' },
-		{ label: 'Blog',		    key: 'blog',		   href: '/blog' },
-		{ label: 'Gallery',		  key: 'gallery',		 href: '/gallery' },
-		{ label: 'Agencies',		key: 'agency',		 href: '/agency' }
+		{ label: 'Home',		    key: 'home',		    href: '/' },
+		{ label: 'About',       key: 'about',       href: '/about'},
+		{ label: 'Services',    key: 'services',    href: '/services'},
+		{ label: 'Events',      key: 'events',      href: '/events'},
+		{ label: 'Resources',   key: 'resources',   href: '/resources'},
+		{ label: 'Mentorship',  key: 'mentorship',  href: '/mentorship'},
+		{ label: 'Contact',		  key: 'contact',		  href: '/contact' },
+		{ label: 'Blog',		    key: 'blog',		    href: '/blog' },
+		{ label: 'Gallery',		  key: 'gallery',		  href: '/gallery' },
+		{ label: 'Agencies',		key: 'agency',		  href: '/agency' }
 	];
 
 	locals.user = req.user;
