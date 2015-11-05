@@ -1,3 +1,5 @@
+#### In this branch I will be adding photos to the site pages. For now, the photos will be stored in /public/images instead of the image gallery.
+
 #### The database has already been built, but just for reference...
 #### To create the database, open a terminal, cd to the project directory, and type:
 
