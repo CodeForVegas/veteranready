@@ -1,26 +1,40 @@
+{{!< default}}
 <div class="container">
-	<h1>Contact Us</h1>
+	<div class="jumbotron">
+		<div class="container text-center" style="margin-top:-35px; margin-bottom:-30px">
+			<h2 style="text-align:center;">Contact Us</h2>
+		</div>
+	</div>
 </div>
 <div class="container">
 	<div class="row">
-		<div class="col-sm-8 col-md-6">
+		<div class="col-md-6">
 			{{#if enquirySubmitted}}
 			<h3>Thanks for getting in touch.</h3>
 			{{else}}
 			<form method="post">
 				<input type="hidden" name="action" value="contact">
 				<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
-					<label>Name</label>
+					<label>Your Name</label>
 					<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
 				</div>
+				<div class="form-group {{#if validationErrors.IAm}}has-error{{/if}}">
+					<label>I am:</label>
+					<select name="IAm" class="form-control">
+						<option value="">(select one)</option>
+						<option value="Veteran">An Individual Veteran</option>
+						<option value="Representative">Representing a Business or Organization</option>
+					</select>
+				</div>
 				<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
-					<label>Email</label>
+					<label>Your Email Address</label>
 					<input type="email" name="email" class="form-control" value="{{formData.email}}">
 				</div>
 				<div class="form-group">
-					<label>Phone</label>
-					<input type="text" name="phone" placeholder="(optional)" class="form-control" value="{{formData.phone}}">
+					<label>Your Phone Number</label>
+					<input type="text" name="phone" class="form-control" value="{{formData.phone}}">
 				</div>
+				<!--
 				<div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
 					<label>What are you contacting us about?</label>
 					<select name="enquiryType" class="form-control">
@@ -29,6 +43,11 @@
 						<option value="{{value}}">{{label}}</option>
 						{{/each}}
 					</select>
+				</div>
+			  -->
+				<div class="form-group {{#if validationErrors.subject}}has-error{{/if}}">
+					<label>Subject</label>
+          <input type="text" name="subject" class="form-control">
 				</div>
 				<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
 					<label>Message</label>
@@ -39,6 +58,17 @@
 				</div>
 			</form>
 			{{/if}}
+		</div>
+		<div class="col-md-4 col-md-offset-2">
+      <h2>Let's talk!</h2>
+      <h3>Veteran Ready</h3>
+      <h4>1445 American Pacific Dr. Ste 110-128</h4>
+      <h4>Henderson, NV 89074</h4>
+			<br>
+      <h4>Admin@VeteranReady.com</h4>
+			<br>
+      <h4>(725) 696-1838</h4>
+      <h4>(702) 427-0515</h4>
 		</div>
 	</div>
 </div>
