@@ -30,7 +30,7 @@ module.exports = {
 			email: 'contact@veteran-ready.com',
 			phone: '+61 2 1234 5678',
 			enquiryType: 'message',
-			subject: 'subject',
+			subject: {},
 			message: { md: 'Nice enquiry notification.' }
 		});
 
