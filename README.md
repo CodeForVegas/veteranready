@@ -1,9 +1,7 @@
-#### In this branch I will be adding photos to the site pages. For now, the photos will be stored in /public/images instead of the image gallery.
-
 #### The database has already been built, but just for reference...
 #### To create the database, open a terminal, cd to the project directory, and type:
 
-1. tar -zxvf mongo.tgz
+1. tar -zxvf mongo.tgz (You don't need to do this if the veteranMongo directory already exists.)
 2. mongorestore --db veteran-ready veteranMongo/
 
 #### To run, open a terminal, cd to the project directory, and type:
@@ -20,4 +18,4 @@
 
 #### Notes
 
-1. I have enough links in the navbar to foul up the header's styling; I think that fix will wait until I have figured out the final navbar layout.
+1. You may need to have MongoDB running in a separate terminal for the application to start. You can find instructions for installing and running MongoDB on OSX at https://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/. If you are using Linux or Windows, find the appropriate link on the left side of the page. I'm building this site with a Mac, so Windows or Linux users may have to jump through some hoops to get the project up and running on their machine.
