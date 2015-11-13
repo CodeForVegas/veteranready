@@ -9,73 +9,88 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-6">
-			{{#if enquirySubmitted}}
-			<h3>Thanks for getting in touch.</h3>
-			{{else}}
-			<form method="post">
-				<input type="hidden" name="action" value="contact">
-				<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
-					<label>Your Name</label>
-					<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
-				</div>
-				<div class="form-group {{#if validationErrors.IAm}}has-error{{/if}}">
-					<label>I am:</label>
-					<select name="IAm" class="form-control">
-						<option value="">(select one)</option>
-						<option value="Veteran">An Individual Veteran</option>
-						<option value="Representative">Representing a Business or Organization</option>
-					</select>
-				</div>
-				<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
-					<label>Your Email Address</label>
-					<input type="email" name="email" class="form-control" value="{{formData.email}}">
-				</div>
-				<div class="form-group">
-					<label>Your Phone Number</label>
-					<input type="text" name="phone" class="form-control" value="{{formData.phone}}">
-				</div>
-				<!--
-				<div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
-					<label>What are you contacting us about?</label>
-					<select name="enquiryType" class="form-control">
-						<option value="">(select one)</option>
-						{{#each enquiryTypes}}
-						<option value="{{value}}">{{label}}</option>
-						{{/each}}
-					</select>
-				</div>
-			  -->
-				<div class="form-group {{#if validationErrors.subject}}has-error{{/if}}">
-					<label>Subject</label>
-					<select name="subject" class="form-control">
-						<option value="">(select one)</option>
-						<option value="Services">Our Services</option>
-						<option value="Events">Post an Event</option>
-						<option value="Resources">Share a Resource</option>
-						<option value="Mentorship">Mentorship or Apprenticeship Opportunities</option>
-						<option value="Other">Something Else</option>
-					</select>
-				</div>
-				<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
-					<label>Message</label>
-					<textarea name="message" placeholder="Leave us a message..." rows="4" class="form-control">{{formData.message}}</textarea>
-				</div>
-				<div class="form-actions">
-					<button type="submit" class="btn btn-primary">Send</button>
-				</div>
-			</form>
-			{{/if}}
+			<div class="jumbotron">
+				{{#if enquirySubmitted}}
+				<h3>Thanks for getting in touch.</h3>
+				{{else}}
+				<form method="post">
+					<input type="hidden" name="action" value="contact">
+					<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
+						<label><h4>Your Name</h4></label>
+						<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
+					</div>
+					<div class="form-group {{#if validationErrors.IAm}}has-error{{/if}}">
+						<label><h4>I am...</h4></label>
+						<select name="IAm" class="form-control">
+							<option value="">(select one)</option>
+							<option value="Veteran">An Individual Veteran</option>
+							<option value="Representative">Representing a Business or Organization</option>
+						</select>
+					</div>
+					<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
+						<label><h4>Your Email Address</h4></label>
+						<input type="email" name="email" class="form-control" value="{{formData.email}}">
+					</div>
+					<div class="form-group">
+						<label><h4>Your Phone Number</h4></label>
+						<input type="text" name="phone" class="form-control" value="{{formData.phone}}">
+					</div>
+					<!--
+					<div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
+						<label>What are you contacting us about?</label>
+						<select name="enquiryType" class="form-control">
+							<option value="">(select one)</option>
+							{{#each enquiryTypes}}
+							<option value="{{value}}">{{label}}</option>
+							{{/each}}
+						</select>
+					</div>
+				  -->
+					<div class="form-group {{#if validationErrors.subject}}has-error{{/if}}">
+						<label><h4>Subject</h4></label>
+						<select name="subject" class="form-control">
+							<option value="">(select one)</option>
+							<option value="Services">Our Services</option>
+							<option value="Events">Post an Event</option>
+							<option value="Resources">Share a Resource</option>
+							<option value="Mentorship">Mentorship or Apprenticeship Opportunities</option>
+							<option value="Other">Something Else</option>
+						</select>
+					</div>
+					<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
+						<label><h4>Message</h4></label>
+						<textarea name="message" placeholder="Leave us a message..." rows="4" class="form-control">{{formData.message}}</textarea>
+					</div>
+					<div class="form-actions">
+						<button type="submit" class="btn btn-primary">Send</button>
+					</div>
+				</form>
+				{{/if}}
+		  </div>
 		</div>
-		<div class="col-md-4 col-md-offset-2">
-      <h2>Let's talk!</h2>
-      <h3>Veteran Ready</h3>
-      <h4>1445 American Pacific Dr. Ste 110-128</h4>
-      <h4>Henderson, NV 89074</h4>
-			<br>
-      <h4>Admin@VeteranReady.com</h4>
-			<br>
-      <h4>(725) 696-1838</h4>
-      <h4>(702) 427-0515</h4>
+		<div class="col-md-5 col-md-offset-1">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h2 class="text-center">Let's Talk!</h2>
+				</div>
+				<div class="panel-body">
+					<h3><b>Veteran Ready</b></h3>
+					<br>
+		      <h4>1445 American Pacific Dr. Ste 110-128</h4>
+		      <h4>Henderson, NV 89074</h4>
+					<br>
+		      <h4>Admin@VeteranReady.com</h4>
+					<br>
+		      <h4>(725) 696-1838</h4>
+		      <h4>(702) 427-0515</h4>
+					<br>
+					<div class="row text-center">
+						<a href="https://www.facebook.com/VeteranReadyNV"><img src="Facebook.ico" alt="Facebook icon"></a>
+						<a href="https://www.linkedin.com/in/annieemprima"><img src="Linkedin.ico" alt="LinkedIn icon"></a>
+						<a href="https://twitter.com/VeteranReady"><img src="Twitter.ico"  alt="Twitter icon"></a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
