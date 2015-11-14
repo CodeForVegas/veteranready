@@ -1,5 +1,3 @@
-#### In this branch I will be modifying the contact page supplied by Keystone.js.
-
 #### The database has already been built, but just for reference...
 #### To create the database, open a terminal, cd to the project directory, and type:
 
