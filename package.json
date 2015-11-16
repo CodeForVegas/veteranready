@@ -25,6 +25,7 @@
     "load-grunt-configs": "^0.4.1",
     "load-grunt-tasks": "^0.4.0",
     "mocha": "*",
+    "mongoose": "^4.2.5",
     "open": "0.0.5",
     "time-grunt": "^0.3.1"
   },
@@ -33,7 +34,8 @@
     "npm": ">=1.3.14"
   },
   "scripts": {
-    "start": "node keystone.js"
+    "start": "node keystone.js",
+    "test": "mocha"
   },
   "main": "keystone.js"
 }
