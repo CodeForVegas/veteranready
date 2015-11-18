@@ -25,7 +25,6 @@
     "load-grunt-configs": "^0.4.1",
     "load-grunt-tasks": "^0.4.0",
     "mocha": "*",
-    "mongoose": "^4.2.5",
     "open": "0.0.5",
     "time-grunt": "^0.3.1"
   },
