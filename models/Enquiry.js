@@ -13,6 +13,10 @@ var Enquiry = new keystone.List('Enquiry', {
 
 Enquiry.add({
 	name: { type: Types.Name, required: true },
+	group: { type: Types.Select, options: [ 
+        { value: 'veteran', label: 'An Individual Veteran' },
+        { value: 'representative', label: 'Representing a Business or Organization'}
+	] },
 	email: { type: Types.Email, required: true, match: /.+@.+\..+/, lowercase: true },
 	phone: { type: String, match: /^(\+0?1\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/ },
 	/*
