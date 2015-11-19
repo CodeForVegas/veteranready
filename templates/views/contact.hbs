@@ -17,7 +17,7 @@
 					<input type="hidden" name="action" value="contact">
 					<div class="form-group {{#if validationErrors.name}}has-error{{/if}}">
 						<label><h4>Your Name</h4></label>
-						<input type="text" name="name.full"  class="form-control" value="{{formData.[name.full]}}">
+						<input type="text" name="name.full" class="form-control" value="{{formData.[name.full]}}">
 					</div>
 					<div class="form-group {{#if validationErrors.IAm}}has-error{{/if}}">
 						<label><h4>I am...</h4></label>
@@ -33,7 +33,7 @@
 					</div>
 					<div class="form-group">
 						<label><h4>Your Phone Number</h4></label>
-						<input type="text" name="phone" class="form-control" value="{{formData.phone}}">
+						<input type="text" name="phone" placeholder="Please include area code" class="form-control" value="{{formData.phone}}">
 					</div>
 					<div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
 						<label><h4>What are you contacting us about?</h4></label>
