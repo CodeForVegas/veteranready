@@ -15,10 +15,19 @@ Enquiry.add({
 	name: { type: Types.Name, required: true },
 	email: { type: Types.Email, required: true, match: /.+@.+\..+/, lowercase: true },
 	phone: { type: String },
+	/*
 	enquiryType: { type: Types.Select, options: [
 		{ value: 'message', label: 'Just leaving a message' },
 		{ value: 'question', label: 'I\'ve got a question' },
 		{ value: 'other', label: 'Something else...' }
+	] },
+	*/
+	enquiryType: { type: Types.Select, options: [
+		{ value: 'services', label: 'Our Services' },
+		{ value: 'events', label: 'Post an Event' },
+		{ value: 'resources', label: 'Share a Resource' },
+		{ value: 'mentorship', label: 'Mentorship or Apprenticeship Opportunities' },
+		{ value: 'other', label: 'Something Else' }
 	] },
 	message: { type: Types.Markdown, required: true },
 	createdAt: { type: Date, default: Date.now }

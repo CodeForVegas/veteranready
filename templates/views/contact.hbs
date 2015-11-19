@@ -35,9 +35,8 @@
 						<label><h4>Your Phone Number</h4></label>
 						<input type="text" name="phone" class="form-control" value="{{formData.phone}}">
 					</div>
-					<!--
 					<div class="form-group {{#if validationErrors.enquiryType}}has-error{{/if}}">
-						<label>What are you contacting us about?</label>
+						<label><h4>What are you contacting us about?</h4></label>
 						<select name="enquiryType" class="form-control">
 							<option value="">(select one)</option>
 							{{#each enquiryTypes}}
@@ -45,7 +44,7 @@
 							{{/each}}
 						</select>
 					</div>
-				  -->
+				    <!--
 					<div class="form-group {{#if validationErrors.subject}}has-error{{/if}}">
 						<label><h4>Subject</h4></label>
 						<select name="subject" class="form-control">
@@ -57,6 +56,7 @@
 							<option value="Other">Something Else</option>
 						</select>
 					</div>
+					-->
 					<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
 						<label><h4>Message</h4></label>
 						<textarea name="message" placeholder="Leave us a message..." rows="4" class="form-control">{{formData.message}}</textarea>
