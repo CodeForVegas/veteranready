@@ -15,6 +15,14 @@ keystone.import('../models');
 chai.should();
 
 describe('Users', function() {
+
+  var user = {
+    name: "Test User",
+    email: "user@test.com",
+    password: "admin",
+    isAdmin: true
+  };
+
   beforeEach(function(done){
     if (keystone.mongoose.connection.db) return done();
     console.log('Connecting to ' + dbURI)
@@ -33,15 +41,7 @@ describe('Users', function() {
     User.should.have.property('schema').be.a('Object');
     done();
   });
-});
 
-describe('User', function() {
-  var user = {
-    name: "Test User",
-    email: "user@test.com",
-    password: "admin",
-    isAdmin: true
-  };
   it('should be valid', function(done) {
     user.should.have.property('name', 'Test User');
     user.should.have.property('email', 'user@test.com');
@@ -49,15 +49,5 @@ describe('User', function() {
     user.should.have.property('isAdmin', true);
     done();
   });
-  /*
-  it('has a name', function(done) {
-    //
-    done();
-  });
 
-  it('has a valid email', function(done) {
-    //
-    done();
-  });
-  */
 });
