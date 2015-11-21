@@ -34,3 +34,30 @@ describe('Users', function() {
     done();
   });
 });
+
+describe('User', function() {
+  var user = {
+    name: "Test User",
+    email: "user@test.com",
+    password: "admin",
+    isAdmin: true
+  };
+  it('should be valid', function(done) {
+    user.should.have.property('name', 'Test User');
+    user.should.have.property('email', 'user@test.com');
+    user.should.have.property('password', 'admin');
+    user.should.have.property('isAdmin', true);
+    done();
+  });
+  /*
+  it('has a name', function(done) {
+    //
+    done();
+  });
+
+  it('has a valid email', function(done) {
+    //
+    done();
+  });
+  */
+});
