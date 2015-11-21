@@ -10,7 +10,7 @@ keystone.init({
   'name': 'Post Model Test'
 });
 
-var Post = null;
+var Post;
 keystone.import('../models');
 chai.should();
 

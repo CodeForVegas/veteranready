@@ -10,7 +10,7 @@ keystone.init({
   'name': 'PostCategory Model Test'
 });
 
-var PostCategory = null;
+var PostCategory;
 keystone.import('../models');
 chai.should();
 

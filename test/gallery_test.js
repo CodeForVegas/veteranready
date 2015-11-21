@@ -10,7 +10,7 @@ keystone.init({
   'name': 'Gallery Model Test'
 });
 
-var Gallery = null;
+var Gallery;
 keystone.import('../models');
 chai.should();
 

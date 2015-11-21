@@ -10,7 +10,7 @@ keystone.init({
   'name': 'Agency Model Test'
 });
 
-var Agency = null;
+var Agency;
 keystone.import('../models');
 chai.should();
 

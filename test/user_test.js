@@ -10,7 +10,7 @@ keystone.init({
   'name': 'User Model Test'
 });
 
-var User = null;
+var User;
 keystone.import('../models');
 chai.should();
 
