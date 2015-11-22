@@ -43,7 +43,13 @@ describe('Users', function() {
   });
 
   it("should register a new user", function(done){
-    //
+    User.register("Next User", "nextuser@test.com", "password", false, function(nextUser) {
+      nextUser.name.should.equal("Next User");
+      nextUser.email.should.equal("nextuser@test.com");
+      nextUser.password.should.equal("password");
+      nextUser.isAdmin.should.equal(false);
+      done();
+    })
     done();
   });
 
