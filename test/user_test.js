@@ -42,6 +42,15 @@ describe('Users', function() {
     done();
   });
 
+  it('should be a valid user', function(done) {
+    user.should.be.a('Object');
+    user.should.have.property('name');
+    user.should.have.property('email');
+    user.should.have.property('password');
+    user.should.have.property('isAdmin');
+    done();
+  });
+
   it("should register a new user", function(done){
     User.register("Next User", "nextuser@test.com", "password", false, function(nextUser) {
       nextUser.name.should.equal("Next User");
@@ -50,15 +59,6 @@ describe('Users', function() {
       nextUser.isAdmin.should.equal(false);
       done();
     })
-    done();
-  });
-
-  it('should be a valid user', function(done) {
-    user.should.be.a('Object');
-    user.should.have.property('name');
-    user.should.have.property('email');
-    user.should.have.property('password');
-    user.should.have.property('isAdmin');
     done();
   });
 

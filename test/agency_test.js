@@ -10,11 +10,19 @@ keystone.init({
   'name': 'Agency Model Test'
 });
 
-var Agency;
+var Agency = new keystone.List('Agency');
 keystone.import('../models');
 chai.should();
 
 describe('Agencies', function() {
+
+  var agency = {
+    name: "Test Agency",
+    email: "agency@test.com",
+    video: "http://agencytest.com",
+    approved: true
+  };
+
   beforeEach(function(done){
     if (keystone.mongoose.connection.db) return done();
     console.log('Connecting to ' + dbURI)
@@ -33,4 +41,25 @@ describe('Agencies', function() {
     Agency.should.have.property('schema').be.a('Object');
     done();
   });
+
+  it('should be a valid agency', function(done) {
+    agency.should.be.a('Object');
+    agency.should.have.property('name');
+    agency.should.have.property('email');
+    agency.should.have.property('video');
+    agency.should.have.property('approved');
+    done();
+  });
+
+  it("should register a new agency", function(done){
+    Agency.register("Next Agency", "nextagency@test.com", "http://nextagency.com", false, function(nextAgency) {
+      nextAgency.name.should.equal("Next Agency");
+      nextAgency.email.should.equal("nextagency@test.com");
+      nextAgency.video.should.equal("http://nextagency.com");
+      nextAgency.isAdmin.should.equal(false);
+      done();
+    })
+    done();
+  });
+
 });
