@@ -58,4 +58,15 @@ describe('Enquiries', function() {
     done();
   });
 
+  it("should register a new enquiry", function(done){
+    Enquiry.register("Next Enquiry", "nextenquiry@test.com", "other", Date(Date.now()), function(nextEnquiry) {
+      nextEnquiry.name.should.equal("Next Enquiry");
+      nextEnquiry.email.should.equal("nextenquiry@test.com");
+      nextEnquiry.enquiryType.should.equal("other");
+      nextEnquiry.createdAt.should.equal(Date(Date.now()));
+      done();
+    })
+    done();
+  });
+
 });
