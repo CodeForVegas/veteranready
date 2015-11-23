@@ -10,11 +10,22 @@ keystone.init({
   'name': 'Enquiry Model Test'
 });
 
-var Enquiry;
+var Enquiry = new keystone.List('Enquiry');
 keystone.import('../models');
 chai.should();
 
 describe('Enquiries', function() {
+
+  var enquiry = {
+    name: "Test Enquiry",
+    group: "veteran",
+    email: "enquiry@test.com",
+    phone: "(123)456-7890",
+    enquiryType: "other",
+    message: "Test enquiry message",
+    createdAt: Date(Date.now())
+  };
+
   beforeEach(function(done){
     if (keystone.mongoose.connection.db) return done();
     console.log('Connecting to ' + dbURI)
@@ -33,4 +44,18 @@ describe('Enquiries', function() {
     Enquiry.should.have.property('schema').be.a('Object');
     done();
   });
+
+  it('should be a valid enquiry', function(done) {
+    enquiry.should.be.a('Object');
+    enquiry.should.have.property('name');
+    enquiry.should.have.property('group');
+    enquiry.should.have.property('email');
+    enquiry.should.have.property('phone');
+    enquiry.should.have.property('enquiryType');
+    enquiry.should.have.property('message');
+    enquiry.should.have.property('createdAt');
+    enquiry.createdAt.should.equal(Date(Date.now()));
+    done();
+  });
+
 });

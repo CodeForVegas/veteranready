@@ -27,7 +27,7 @@ Enquiry.add({
 		{ value: 'other', label: 'Something Else' }
 	] },
 	message: { type: Types.Markdown, required: true },
-	createdAt: { type: Date, default: Date.now }
+	createdAt: { type: Date, default: Date(Date.now()) }
 });
 
 Enquiry.schema.pre('save', function(next) {
