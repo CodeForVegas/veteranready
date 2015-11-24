@@ -10,11 +10,19 @@ keystone.init({
   'name': 'Gallery Model Test'
 });
 
-var Gallery;
+var Enquiry = new keystone.List('Enquiry');
 keystone.import('../models');
 chai.should();
 
 describe('Galleries', function() {
+
+  var gallery = {
+    name: "Test Gallery",
+    publishedDate: Date(Date.now()),
+    heroImage: {},
+    images: {}
+  }
+
   beforeEach(function(done){
     if (keystone.mongoose.connection.db) return done();
     console.log('Connecting to ' + dbURI)
@@ -31,6 +39,15 @@ describe('Galleries', function() {
     Gallery.should.be.a('Object');
     Gallery.should.have.property('model').be.a('Function');
     Gallery.should.have.property('schema').be.a('Object');
+    done();
+  });
+
+  it('should be a valid gallery', function(done) {
+    gallery.should.be.a('Object');
+    gallery.should.have.property('name');
+    gallery.should.have.property('publishedDate');
+    gallery.should.have.property('heroImage');
+    gallery.should.have.property('images');
     done();
   });
 });
