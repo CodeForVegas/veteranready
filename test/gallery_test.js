@@ -50,4 +50,15 @@ describe('Galleries', function() {
     gallery.should.have.property('images');
     done();
   });
+
+  it('should register a new gallery', function(done) {
+    Gallery.register("Next Gallery", Date(Date.now()), {}, {}, function(nextGallery) {
+      nextGallery.name.should.equal("Next Gallery");
+      nextGallery.publishedDate.should.equal(Date(Date.now()));
+      nextGallery.heroImage.should.be.a('Object');
+      nextGallery.image.should.be.a('Object');
+    });
+    done();
+  });
+  
 });
