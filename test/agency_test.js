@@ -52,6 +52,7 @@ describe('Agencies', function() {
   });
 
   it("should register a new agency", function(done){
+    Agency.should.have.property('register').be.a('Function');
     Agency.register("Next Agency", "nextagency@test.com", "http://nextagency.com", false, function(nextAgency) {
       nextAgency.name.should.equal("Next Agency");
       nextAgency.email.should.equal("nextagency@test.com");

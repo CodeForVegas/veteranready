@@ -52,6 +52,7 @@ describe('Users', function() {
   });
 
   it("should register a new user", function(done){
+    User.should.have.property('register').be.a('Function');
     User.register("Next User", "nextuser@test.com", "password", false, function(nextUser) {
       nextUser.name.should.equal("Next User");
       nextUser.email.should.equal("nextuser@test.com");

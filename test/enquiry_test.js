@@ -59,6 +59,7 @@ describe('Enquiries', function() {
   });
 
   it("should register a new enquiry", function(done){
+    Enquiry.should.have.property('register').be.a('Function');
     Enquiry.register("Next Enquiry", "nextenquiry@test.com", "other", Date(Date.now()), function(nextEnquiry) {
       nextEnquiry.name.should.equal("Next Enquiry");
       nextEnquiry.email.should.equal("nextenquiry@test.com");

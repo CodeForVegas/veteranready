@@ -52,6 +52,7 @@ describe('Galleries', function() {
   });
 
   it('should register a new gallery', function(done) {
+    Gallery.should.have.property('register').be.a('Function');
     Gallery.register("Next Gallery", Date(Date.now()), {}, {}, function(nextGallery) {
       nextGallery.name.should.equal("Next Gallery");
       nextGallery.publishedDate.should.equal(Date(Date.now()));
@@ -60,5 +61,5 @@ describe('Galleries', function() {
     });
     done();
   });
-  
+
 });

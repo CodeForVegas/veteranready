@@ -31,6 +31,7 @@ describe('PostCategories', function() {
     PostCategory.should.be.a('Object');
     PostCategory.should.have.property('model').be.a('Function');
     PostCategory.should.have.property('schema').be.a('Object');
+    PostCategory.should.have.property('register').be.a('Function');
     done();
   });
 });

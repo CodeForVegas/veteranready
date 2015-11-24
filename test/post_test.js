@@ -31,6 +31,7 @@ describe('Posts', function() {
     Post.should.be.a('Object');
     Post.should.have.property('model').be.a('Function');
     Post.should.have.property('schema').be.a('Object');
+    Post.should.have.property('register').be.a('Function');
     done();
   });
 });
