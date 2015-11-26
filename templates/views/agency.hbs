@@ -9,8 +9,9 @@
 				<div class="post">
           <h2>{{name}}</h2>
           email: {{email}}<br />
+					topic: {{topic}}<br />
 					{{#if representative}}representative: <img src="{{cloudinaryUrl representative width='300' height='300'}}" class="img-rounded">{{/if}}<br />
-          {{#if video}}video: <iframe width="420" height="315" src="{{video}}" frameborder="0" allowfullscreen></iframe>{{/if}}
+          {{#if video}}video: <iframe width="420" height="315" src="{{video}}" frameborder="0" allowfullscreen></iframe>{{/if}}<br />
 				</div>
 				{{/each}}
 			</div>
