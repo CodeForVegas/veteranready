@@ -1,14 +1,17 @@
 var keystone = require('keystone'),
     Types = keystone.Field.Types;
 
-var Agency = new keystone.List('Agency');
+// var Agency = new keystone.List('Agency');
+var Agency = new keystone.List('Agency', {
+	autokey: { from: 'name', path: 'key', unique: true }
+});
 
 Agency.add({
-    name: { type: String, required: true, index: true },
-    email: { type: Types.Email, initial: true, required: true, index: true },
-    representative: { type: Types.CloudinaryImages, required: false, index: false },
-    video: { type: Types.Url, initial: true, required: false, index: false },
-    approved: { type: Types.Boolean, initial: true, index: true },
+  name: { type: String, required: true, index: true },
+  email: { type: Types.Email, initial: true, required: true, index: true },
+  representative: { type: Types.CloudinaryImage, required: false, index: false },
+  video: { type: Types.Url, initial: true, required: false, index: false },
+  approved: { type: Types.Boolean, initial: true, index: true },
 });
 
 Agency.schema.pre('save', function(next) {
