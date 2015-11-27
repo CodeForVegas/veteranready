@@ -11,6 +11,16 @@ Agency.add({
   representative: { type: Types.CloudinaryImage, required: false, index: false },
   video: { type: Types.Url, initial: true, required: false, index: false },
   topic: { type: Types.Select, options: 'All, Education, Employment, Health and Welfare, Housing', default: 'All', initial: true, required: true, index: true },
+/* We want to be able to select multiple options from the list of topics, but Types.Select only allows one.
+  http://keystonejs.com/docs/database/#relationships
+  http://keystonejs.com/docs/database/#relationship-fields
+  topic: { type: Types.Relationship, label: 'Topics', ref: 'Post', many: true },
+  topic: { type: Types.Relationship, ref: 'existingModel', filters: { group: ':relevantGroup' } }
+
+  https://docs.mongodb.org/manual/tutorial/model-data-for-keyword-search/#model-data-to-support-keyword-search
+  https://docs.mongodb.org/manual/core/index-multikey/#multikey-indexes
+  https://docs.mongodb.org/getting-started/node/query/#find-or-query-data-with-node-js
+*/
   approved: { type: Types.Boolean, initial: true, index: true },
 });
 
