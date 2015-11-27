@@ -19,8 +19,8 @@ describe('Galleries', function() {
   var gallery = {
     name: "Test Gallery",
     publishedDate: Date(Date.now()),
-    heroImage: {},
-    images: {}
+    heroImage: "http://res.cloudinary.com/dnar4muay/image/upload/h_550,w_800/mkfhsevbaitvu7ewhhau.jpg",
+    images: "http://res.cloudinary.com/dnar4muay/image/upload/h_300,w_300/mllby5kadaasbmjsltmf.jpg"
   }
 
   beforeEach(function(done){
@@ -53,11 +53,11 @@ describe('Galleries', function() {
 
   it('should register a new gallery', function(done) {
     Gallery.should.have.property('register').be.a('Function');
-    Gallery.register("Next Gallery", Date(Date.now()), {}, {}, function(nextGallery) {
+    Gallery.register("Next Gallery", Date(Date.now()), "http://res.cloudinary.com/dnar4muay/image/upload/h_550,w_800/mkfhsevbaitvu7ewhhau.jpg", "http://res.cloudinary.com/dnar4muay/image/upload/h_300,w_300/mllby5kadaasbmjsltmf.jpg", function(nextGallery) {
       nextGallery.name.should.equal("Next Gallery");
       nextGallery.publishedDate.should.equal(Date(Date.now()));
-      nextGallery.heroImage.should.be.a('Object');
-      nextGallery.image.should.be.a('Object');
+      nextGallery.heroImage.should.equal("http://res.cloudinary.com/dnar4muay/image/upload/h_550,w_800/mkfhsevbaitvu7ewhhau.jpg");
+      nextGallery.image.should.equal("http://res.cloudinary.com/dnar4muay/image/upload/h_300,w_300/mllby5kadaasbmjsltmf.jpg");
     });
     done();
   });
