@@ -181,4 +181,51 @@
 									</p>
 								</form>
 							</div>
+
+
+// Below is from https://www.sitepoint.com/community/t/display-other-data-based-on-dropdown-selection/37679/6
+
+							<div>
+							  <label for="topicOfInterest">Topic of Interest</label>
+								<select id="topicOfInterest">
+								  <option value="">Please select</option>
+									<option value="all">All</option>
+									<option value="education">Education</option>
+									<option value="employment">Employment</option>
+									<option value="healthAndWelfare">Health and Welfare</option>
+									<option value="housing">Housing</option>
+							  </select>
+							</div>
+
+							<div id="results"></div>
+
+							<script src="/js/jquery/jquery-1.11.3.min.js"></script>
+							<script>
+								function makeAjaxRequest(options) {
+								  $.ajax({
+									  type: "POST",
+										data: { options: options },
+										url: "process_ajax.php",
+										success: function(response) {
+										  $("#results").html("<p>$_POST contained: " + response +  "</p>");
+									  }
+								  });
+							  }
+
+							  $(document).ready(function() {
+								  $("topicOfInterest").on("change", function() {
+									  var selected = $(this).value();
+										// $("#results").html("You selected: " + selected);
+										makeAjaxRequest(selected);
+								  })
+								});
+						  </script>
+
+process_ajax.php:
+		<?php
+			// Database logic here
+			echo '<pre>';
+			print_r($_POST);
+		  echo '</pre>';
+		?>
 -->
