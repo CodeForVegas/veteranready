@@ -125,7 +125,7 @@
 									Topic of Interest <span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu">
-									<li><a href="#">All</a></li>
+									<li class="clickable" id="all"><a href="#">All</a></li>
 									<li><a href="#">Education</a></li>
 									<li><a href="#">Employment</a></li>
 									<li><a href="#">Health and Welfare</a></li>
@@ -136,12 +136,34 @@
 						<div class="text-center" style="margin-top:15px;">
 							<a href="#" class="btn btn-primary btn-block">Custom Search</a>
 						</div>
+            <div>
+              <label for="topicOfInterest">Topic of Interest</label>
+              <select id="topicOfInterest">
+                <option value="">Please select</option>
+                <option value="all">All</option>
+                <option value="education">Education</option>
+                <option value="employment">Employment</option>
+                <option value="healthAndWelfare">Health and Welfare</option>
+                <option value="housing">Housing</option>
+              </select>
+            </div>
+
+            <div id="results"></div>
+
 					</div>
 				</div>
 			</div>
 		</div>
   </div>
 </div>
+<!--        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+<script src="/js/jquery/jquery-1.11.3.min.js"></script>
+<script>
+  $("#topicOfInterest").on("change", function(){
+    var selected = $(this).val();
+    $("#results").html("You selected: " + selected);
+  })
+</script>
 
 
 
@@ -184,6 +206,41 @@
 
 
 // Below is from https://www.sitepoint.com/community/t/display-other-data-based-on-dropdown-selection/37679/6
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dropdown example</title>
+  </head>
+
+  <body>
+
+    <div>
+      <label for="topicOfInterest">Topic of Interest</label>
+      <select id="topicOfInterest">
+        <option value="">Please select</option>
+        <option value="all">All</option>
+        <option value="education">Education</option>
+        <option value="employment">Employment</option>
+        <option value="healthAndWelfare">Health and Welfare</option>
+        <option value="housing">Housing</option>
+      </select>
+    </div>
+
+    <div id="results"></div>
+
+ // <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/js/jquery/jquery-1.11.3.min.js"></script>
+    <script>
+      $("#topicOfInterest").on("change", function(){
+        var selected = $(this).val();
+        $("#results").html("You selected: " + selected);
+      })
+    </script>
+
+  </body>
+</html>
 
 							<div>
 							  <label for="topicOfInterest">Topic of Interest</label>
