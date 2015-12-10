@@ -71,15 +71,115 @@
 				<div class="panel-body">
 					<p>Please select the relevant options from the dropdown menus below. Your information will not be saved, stored, or shared.</p>
 					<div class="text-center">
-	          <div class="btn-group-vertical">
+
+						<div class="btn-group-vertical">
 							<div class="btn-group">
-							  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							    Gender <span class="caret"></span>
-							  </button>
-							  <ul class="dropdown-menu">
-							    <li><a href="#">Female</a></li>
-							    <li><a href="#">Male</a></li>
-							  </ul>
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Gender <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><input type="radio" value="female">  Female</input></li>
+									<li><input type="radio" value="male">  Male</input></li>
+									<li><input type="submit" value="Submit"></input></li>
+								</ul>
+							</div>
+							<div class="btn-group">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Most Recent Service Decade <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><input type="button" value="1940s"></input></li>
+									<li><input type="button" value="1950s"></input></li>
+									<li><input type="button" value="1960s"></input></li>
+									<li><input type="button" value="1970s"></input></li>
+									<li><input type="button" value="1980s"></input></li>
+									<li><input type="button" value="1990s"></input></li>
+									<li><input type="button" value="2000s"></input></li>
+									<li><input type="button" value="2010s"></input></li>
+								</ul>
+							</div>
+							<div class="btn-group">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Nevada County of Residence <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><input type="checkbox" value="carsonCity">  Carson City</input></li>
+									<li><input type="checkbox" value="churchill">  Churchill</input></li>
+									<li><input type="checkbox" value="clark">  Clark</input></li>
+									<li><input type="checkbox" value="douglas">  Douglas</input></li>
+									<li><input type="checkbox" value="elko">  Elko</input></li>
+									<li><input type="checkbox" value="esmeralda">  Esmeralda</input></li>
+									<li><input type="checkbox" value="eureka">  Eureka</input></li>
+									<li><input type="checkbox" value="humboldt">  Humboldt</input></li>
+									<li><input type="checkbox" value="lander">  Lander</input></li>
+									<li><input type="checkbox" value="lincoln">  Lincoln</input></li>
+									<li><input type="checkbox" value="lyon">  Lyon</input></li>
+									<li><input type="checkbox" value="mineral">  Mineral</input></li>
+									<li><input type="checkbox" value="nye">  Nye</input></li>
+									<li><input type="checkbox" value="pershing">  Pershing</input></li>
+									<li><input type="checkbox" value="storey">  Storey</input></li>
+									<li><input type="checkbox" value="washoe">  Washoe</input></li>
+									<li><input type="checkbox" value="whitePine">  White Pine</input></li>
+								</ul>
+							</div>
+							<div class="btn-group">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Topic of Interest <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li class="clickable" id="all"><a href="#">All</a></li>
+									<li><a href="#">Education</a></li>
+									<li><a href="#">Employment</a></li>
+									<li><a href="#">Health and Welfare</a></li>
+									<li><a href="#">Housing</a></li>
+								</ul>
+							</div>
+						</div>
+
+
+            <div>
+              <label for="topic">Topic of Interest</label>
+              <select id="topic">
+                <option value="">Please select</option>
+                <option value="all">All</option>
+                <option value="education">Education</option>
+                <option value="employment">Employment</option>
+                <option value="healthAndWelfare">Health and Welfare</option>
+                <option value="housing">Housing</option>
+              </select>
+            </div>
+
+            <div id="topicResults"></div>
+
+						<div class="text-center" style="margin-top:15px;">
+							<a href="#" class="btn btn-primary btn-block">Custom Search</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </div>
+</div>
+
+<script src="/js/jquery/jquery-1.11.3.min.js"></script>
+<script>
+  $("#topic").on("change", function(){
+    var selected = $(this).val();
+    $("#topicResults").html("You selected: " + selected);
+  })
+</script>
+
+
+<!-- Layout with the pretty dropdown menus and text boxes
+						<div class="btn-group-vertical">
+							<div class="btn-group">
+								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Gender <span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a href="#">Female</a></li>
+									<li><a href="#">Male</a></li>
+								</ul>
 							</div>
 							<div class="btn-group">
 								<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -133,38 +233,7 @@
 								</ul>
 							</div>
 						</div>
-						<div class="text-center" style="margin-top:15px;">
-							<a href="#" class="btn btn-primary btn-block">Custom Search</a>
-						</div>
-            <div>
-              <label for="topicOfInterest">Topic of Interest</label>
-              <select id="topicOfInterest">
-                <option value="">Please select</option>
-                <option value="all">All</option>
-                <option value="education">Education</option>
-                <option value="employment">Employment</option>
-                <option value="healthAndWelfare">Health and Welfare</option>
-                <option value="housing">Housing</option>
-              </select>
-            </div>
-
-            <div id="results"></div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-  </div>
-</div>
-<!--        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
-<script src="/js/jquery/jquery-1.11.3.min.js"></script>
-<script>
-  $("#topicOfInterest").on("change", function(){
-    var selected = $(this).val();
-    $("#results").html("You selected: " + selected);
-  })
-</script>
-
+-->
 
 
 <!--  Experiments with the options on the dropdown menus
