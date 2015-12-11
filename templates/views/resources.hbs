@@ -19,7 +19,8 @@
 				<div class="panel-body">
 					<img src="/images/american_flag.jpg" class="img-responsive" alt="American Flag">
 					<p style="margin-top:57px;">A brief description, examples, and maybe a photo.</p>
-					<a href="#" class="btn btn-primary btn-block">View All</a>
+					<button type="button" id="allAgencies" class="btn btn-primary btn-block">View All</button>
+					<div id="allAgenciesResults"></div>
 				</div>
 			</div>
 		</div>
@@ -31,7 +32,8 @@
 				<div class="panel-body">
 					<img src="/images/joe_heck2.jpg" class="img-responsive" alt="Joe Heck">
 					<p style="margin-top:3px;">A brief description, examples, and maybe a photo.</p>
-					<a href="#" class="btn btn-primary btn-block">View All</a>
+					<button type="button" id="allRepresentatives" class="btn btn-primary btn-block">View All</button>
+					<div id="allRepresentativesResults"></div>
 				</div>
 			</div>
 		</div>
@@ -43,7 +45,8 @@
 				<div class="panel-body">
 					<img src="/images/business_presentation.jpg" class="img-responsive" alt="Business Presentation">
 					<p style="margin-top:91px;">A brief description, examples, and maybe a photo.</p>
-					<a href="#" class="btn btn-primary btn-block">View All</a>
+					<button type="button" id="allServices" class="btn btn-primary btn-block">View All</button>
+					<div id="allServicesResults"></div>
 				</div>
 			</div>
 		</div>
@@ -55,7 +58,8 @@
 				<div class="panel-body">
 					<img src="/images/topic_map.png" class="img-responsive" alt="Topic Map">
 					<p style="margin-top:56px;">A brief description, examples, and maybe a photo.</p>
-					<a href="#" class="btn btn-primary btn-block">View All</a>
+					<button type="button" id="allTopics" class="btn btn-primary btn-block">View All</button>
+					<div id="allTopicsResults"></div>
 				</div>
 			</div>
 		</div>
@@ -126,7 +130,8 @@
 	      </div>
 	      <div id="topicResults" style="margin-bottom:10px;"></div>
 				<div class="text-center" style="margin-top:15px;">
-					<a href="#" class="btn btn-primary btn-block">Custom Search</a>
+					<button type="button" id="customSearch" class="btn btn-primary btn-block">View All</button>
+					<div id="customSearchResults"></div>
 				</div>
 			</div>
 		</div>
@@ -135,18 +140,42 @@
 
 <script src="/js/jquery/jquery-1.11.3.min.js"></script>
 <script>
+
+	$("#allAgencies").click(function(){
+		$("#allAgenciesResults").html("All Agencies Query Selected")
+	});
+
+	$("#allRepresentatives").click(function(){
+		$("#allRepresentativesResults").html("All Representatives Query Selected")
+	});
+
+	$("#allServices").click(function(){
+		$("#allServicesResults").html("All Services Query Selected")
+	});
+
+	$("#allTopics").click(function(){
+		$("#allTopicsResults").html("All Topics Query Selected")
+	});
+
+	$("#customSearch").click(function(){
+		$("#customSearchResults").html("Custom Search Selected")
+	});
+
   $("#gender").on("change", function(){
     var selected = $(this).val();
     $("#genderResults").html("You selected: " + selected);
   });
+
 	$("#serviceDecade").on("change", function(){
 		var selected = $(this).val();
 		$("#serviceDecadeResults").html("You selected: " + selected);
 	});
+
 	$("#county").on("change", function(){
 		var selected = $(this).val();
 		$("#countyResults").html("You selected: " + selected);
 	});
+
 	$("#topic").on("change", function(){
 		var selected = $(this).val();
 		$("#topicResults").html("You selected: " + selected);
