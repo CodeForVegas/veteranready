@@ -19,7 +19,7 @@ describe('Agencies', function() {
   var agency = {
     name: "Test Agency",
     email: "agency@test.com",
-    representative: "http://res.cloudinary.com/dnar4muay/image/upload/h_300,w_300/mllby5kadaasbmjsltmf.jpg",
+    contactPhoto: "http://res.cloudinary.com/dnar4muay/image/upload/h_300,w_300/mllby5kadaasbmjsltmf.jpg",
     video: "http://agencytest.com",
     topic: "All",
     approved: true
@@ -48,7 +48,7 @@ describe('Agencies', function() {
     agency.should.be.a('Object');
     agency.should.have.property('name');
     agency.should.have.property('email');
-    agency.should.have.property('representative');
+    agency.should.have.property('contactPhoto');
     agency.should.have.property('video');
     agency.should.have.property('topic');
     agency.should.have.property('approved');
@@ -60,7 +60,7 @@ describe('Agencies', function() {
     Agency.register("Next Agency", "nextagency@test.com", "http://res.cloudinary.com/dnar4muay/image/upload/h_300,w_300/mllby5kadaasbmjsltmf.jpg", "http://nextagency.com", "All", true, function(nextAgency) {
       nextAgency.name.should.equal("Next Agency");
       nextAgency.email.should.equal("nextagency@test.com");
-      nextAgency.representative.should.equal("http://res.cloudinary.com/dnar4muay/image/upload/h_300,w_300/mllby5kadaasbmjsltmf.jpg");
+      nextAgency.contactPhoto.should.equal("http://res.cloudinary.com/dnar4muay/image/upload/h_300,w_300/mllby5kadaasbmjsltmf.jpg");
       nextAgency.video.should.equal("http://nextagency.com");
       nextAgency.topic.should.equal("All");
       nextAgency.isAdmin.should.equal(true);
