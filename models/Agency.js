@@ -8,19 +8,18 @@ var Agency = new keystone.List('Agency', {
 Agency.add({
   name: { type: String, required: true, index: true },
   email: { type: Types.Email, initial: true, required: true, index: true },
-  representative: { type: Types.CloudinaryImage, required: false, index: false },
+  address: { type: Types.Location, defaults: { state: 'Nevada' } },
+  phone: { type: Types.Number, initial: true, required: true, index: false},
+  socialMedia: { type: Boolean },
+  logo: { type: Types.CloudinaryImage, required: false, index: false },
   video: { type: Types.Url, initial: true, required: false, index: false },
+  description: { type: Boolean },
+  associates: { type: Boolean },
   topic: { type: Types.Select, options: 'All, Education, Employment, Health and Welfare, Housing', default: 'All', initial: true, required: true, index: true },
-/* We want to be able to select multiple options from the list of topics, but Types.Select only allows one.
-  http://keystonejs.com/docs/database/#relationships
-  http://keystonejs.com/docs/database/#relationship-fields
-  topic: { type: Types.Relationship, label: 'Topics', ref: 'Post', many: true },
-  topic: { type: Types.Relationship, ref: 'existingModel', filters: { group: ':relevantGroup' } }
-
-  https://docs.mongodb.org/manual/tutorial/model-data-for-keyword-search/#model-data-to-support-keyword-search
-  https://docs.mongodb.org/manual/core/index-multikey/#multikey-indexes
-  https://docs.mongodb.org/getting-started/node/query/#find-or-query-data-with-node-js
-*/
+  contactName: { type: String, initial: true, required: true, index: true },
+  contactTitle: { type: String, required: false, index: true },
+  contactPhoto: { type: Types.CloudinaryImage, required: false, index: false },
+  contactMilitaryService: { type:Boolean },
   approved: { type: Types.Boolean, initial: true, index: true },
 });
 
@@ -33,5 +32,16 @@ Agency.schema.pre('save', function(next) {
   next();
 });
 
-Agency.defaultColumns = 'name, email, topic, approved';
+Agency.defaultColumns = 'name, email, address, description, topic, contactName, approved';
 Agency.register();
+
+/* We want to be able to select multiple options from the list of topics, but Types.Select only allows one.
+  http://keystonejs.com/docs/database/#relationships
+  http://keystonejs.com/docs/database/#relationship-fields
+  topic: { type: Types.Relationship, label: 'Topics', ref: 'Post', many: true },
+  topic: { type: Types.Relationship, ref: 'existingModel', filters: { group: ':relevantGroup' } }
+
+  https://docs.mongodb.org/manual/tutorial/model-data-for-keyword-search/#model-data-to-support-keyword-search
+  https://docs.mongodb.org/manual/core/index-multikey/#multikey-indexes
+  https://docs.mongodb.org/getting-started/node/query/#find-or-query-data-with-node-js
+*/
