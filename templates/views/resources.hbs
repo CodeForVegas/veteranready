@@ -142,25 +142,25 @@
 
 <script src="/js/jquery/jquery-1.11.3.min.js"></script>
 <script>
-
-	$("#allAgencies").click(function(){
-		$("#allAgenciesResults").html("{{#each data.agency}}{{name}}<br />{{/each}}")
-	});
-
+$(document).ready(function () {
+  $("#allAgencies").click(function() {
+	  $("#allAgenciesResults").toggle().html("{{#each data.agency}}{{name}}<br />{{/each}}")
+  });
+	
 	$("#allRepresentatives").click(function(){
-		$("#allRepresentativesResults").html("{{#each data.agency}}{{contactName}}<br />{{/each}}")
+		$("#allRepresentativesResults").toggle().html("{{#each data.agency}}{{contactName}}<br />{{/each}}")
 	});
 
 	$("#allServices").click(function(){
-		$("#allServicesResults").html("{{#each data.agency}}{{topic}}<br />{{/each}}")
+		$("#allServicesResults").toggle().html("{{#each data.agency}}{{topic}}<br />{{/each}}")
 	});
 
 	$("#allTopics").click(function(){
-		$("#allTopicsResults").html("{{#each data.agency}}{{topic}}<br />{{/each}}")
+		$("#allTopicsResults").toggle().html("{{#each data.agency}}{{topic}}<br />{{/each}}")
 	});
 
 	$("#customSearch").click(function(){
-		$("#customSearchResults").html("{{#each data.agency}}{{name}}<br />{{/each}}")
+		$("#customSearchResults").toggle().html("{{#each data.agency}}{{name}}<br />{{/each}}")
 	});
 
   $("#gender").on("change", function(){
@@ -182,6 +182,7 @@
 		var selected = $(this).val();
 		$("#topicResults").html("You selected: " + selected);
 	});
+});
 </script>
 
 <!-- Layout with different input styles: buttons, checkboxes, etc.
