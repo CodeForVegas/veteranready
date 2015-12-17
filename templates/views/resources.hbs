@@ -144,19 +144,19 @@
 <script>
 
 	$("#allAgencies").click(function(){
-		$("#allAgenciesResults").html("All Agencies Query Selected")
+		$("#allAgenciesResults").html("{{#each data.agency}}{{name}}<br />{{/each}}")
 	});
 
 	$("#allRepresentatives").click(function(){
-		$("#allRepresentativesResults").html("All Representatives Query Selected")
+		$("#allRepresentativesResults").html("{{#each data.agency}}{{contactName}}<br />{{/each}}")
 	});
 
 	$("#allServices").click(function(){
-		$("#allServicesResults").html("All Services Query Selected")
+		$("#allServicesResults").html("{{#each data.agency}}{{topic}}<br />{{/each}}")
 	});
 
 	$("#allTopics").click(function(){
-		$("#allTopicsResults").html("All Topics Query Selected")
+		$("#allTopicsResults").html("{{#each data.agency}}{{topic}}<br />{{/each}}")
 	});
 
 	$("#customSearch").click(function(){
