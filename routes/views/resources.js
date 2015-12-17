@@ -5,8 +5,30 @@ exports = module.exports = function(req, res) {
   var view = new keystone.View(req, res);
   var locals = res.locals;
 
-  locals.section = 'resources';
+  // Set locals
+	locals.section = 'resources';
+	locals.filters = {
+		agency: req.params.agency
+	};
+	locals.data = {
+		agencies: []
+	};
 
-  view.render('resources');
+	// Load the current agency
+	view.on('init', function(next) {
+
+		var q = keystone.list('Agency').model.find({
+      approved: true
+		})
+
+		q.exec(function(err, result) {
+			locals.data.agency = result;
+			next(err);
+		});
+
+	});
+
+	// Render the view
+	view.render('resources');
 
 };
