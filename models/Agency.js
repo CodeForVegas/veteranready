@@ -7,19 +7,22 @@ var Agency = new keystone.List('Agency', {
 
 Agency.add({
   name: { type: String, required: true, index: true },
+  website: { type: Types.Url, index: false },
   email: { type: Types.Email, initial: true, required: true, index: true },
   address: { type: Types.Location, defaults: { state: 'Nevada' } },
-  phone: { type: Types.Number, initial: true, required: false, index: false},
+  phone: { type: String, initial: true, required: false, index: false},
   socialMedia: { type: Types.Url, index: false },
   logo: { type: Types.CloudinaryImage, required: false, index: false },
   video: { type: Types.Url, initial: true, required: false, index: false },
-  description: { type: Types.Text, initial: true, required: true, index: true },
-  associates: { type: String, index: false },
+  summary: { type: Types.Text, initial: true, required: true, index: true},
+  description: { type: Types.Text, index: false },
+  associateAgencies: { type: String, index: false },
   topic: { type: Types.Select, options: 'All, Education, Employment, Health and Welfare, Housing, Media, Networking and Referrals', default: 'All', initial: true, required: true, index: true },
   contactName: { type: String, initial: true, required: true, index: true },
   contactTitle: { type: String, required: false, index: false },
   contactPhoto: { type: Types.CloudinaryImage, required: false, index: false },
   contactMilitaryService: { type: String, index: false },
+  keywords: { type: String, index:true },
   approved: { type: Types.Boolean, initial: true, index: true },
 });
 
@@ -32,7 +35,7 @@ Agency.schema.pre('save', function(next) {
   next();
 });
 
-Agency.defaultColumns = 'name, email, address, description, topic, contactName, approved';
+Agency.defaultColumns = 'name, email, address, summary, topic, contactName, approved';
 Agency.register();
 
 /* We want to be able to select multiple options from the list of topics, but Types.Select only allows one.
