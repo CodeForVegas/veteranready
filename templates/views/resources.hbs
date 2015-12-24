@@ -73,18 +73,19 @@
 					<h4 class="text-center"><b>Custom Search</b></h4>
 				</div>
 				<div class="panel-body">
-					<p>Please select the relevant options from the dropdown menus below. Your information will not be saved, stored, or shared.</p>
+					<p>Please select the relevant options from the dropdown menus below. You may select multiple options by holding ctrl button while selecting options. Your information will not be saved, stored, or shared.</p>
 				</div>
 				<div class="text-center" style="margin-bottom:12px;">
           <p style="margin-bottom:0px;"><label for="gender">Gender:</label></p>
 	        <select id="gender" multiple=True>
 						<option value="female">Female</option>
 						<option value="male">Male</option>
+						<option value="nonSpecified">Not Specified</option>
 					</select>
 				</div>
 				<div id="genderResults" style="margin-bottom:10px;"></div>
 				<div class="text-center" style="margin-bottom:12px;">
-					<p style="margin-bottom:0px;"><label for="serviceDecade">Service Decade:</label></p>
+					<p style="margin-bottom:0px;"><label for="serviceDecade">Last Decade Served :</label></p>
 					<select id="serviceDecade" multiple=True>
 						<option value="1950s">1950s</option>
 						<option value="1960s">1960s</option>
@@ -124,8 +125,9 @@
 	        <select id="topic" multiple=True>
 	          <option value="education">Education</option>
 	          <option value="employment">Employment</option>
-	          <option value="healthAndWelfare">Health and Welfare</option>
+	          <option value="healthAndWelfare">Health and Wellness</option>
 	          <option value="housing">Housing</option>
+						<option value="legal">Legal</option>
 						<option value="media">Media</option>
 						<option value="networkingAndReferrals">Networking and Referrals</option>
 	        </select>
@@ -146,7 +148,7 @@ $(document).ready(function () {
   $("#allAgencies").click(function() {
 	  $("#allAgenciesResults").toggle().html("{{#each data.agency}}{{name}}<br />{{/each}}")
   });
-	
+
 	$("#allRepresentatives").click(function(){
 		$("#allRepresentativesResults").toggle().html("{{#each data.agency}}{{contactName}}<br />{{/each}}")
 	});

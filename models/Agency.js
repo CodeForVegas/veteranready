@@ -17,7 +17,7 @@ Agency.add({
   summary: { type: Types.Text, initial: true, required: true, index: true},
   description: { type: Types.Text, required: false, index: false },
   associateAgencies: { type: String, required: false, index: false },
-  topic: { type: Types.Select, options: 'All, Education, Employment, Health and Welfare, Housing, Media, Networking and Referrals', default: 'All', initial: true, required: true, index: true },
+  topic: { type: Types.Select, options: 'All, Education, Employment, Health and Wellness, Housing, Legal, Media, Networking and Referrals', default: 'All', initial: true, required: true, index: true },
   contactName: { type: String, initial: true, required: true, index: true },
   contactTitle: { type: String, required: false, index: false },
   contactPhoto: { type: Types.CloudinaryImage, required: false, index: false },
