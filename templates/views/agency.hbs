@@ -8,10 +8,22 @@
 				{{#each data.agency}}
 				<div class="post">
           <h2>{{name}}</h2>
-          email: {{email}}<br />
+					{{#if logo}}<img src="{{cloudinaryUrl logo width='300'}}" class="img-responsive">{{/if}}<br />
+					{{#if video}}<iframe width="420" height="315" src="{{video}}" frameborder="0" allowfullscreen></iframe>{{/if}}<br />
+					contactName: {{contactName}}<br />
+					contactTitle: {{contactTitle}}<br />
+					contactMilitaryService: {{contactMilitaryService}}<br />
+					{{#if contactPhoto}}<img src="{{cloudinaryUrl contactPhoto width='300'}}" class="img-responsive">{{/if}}<br />
+					website: {{website}}<br />
+					email: {{email}}<br />
+          address: {{address}}<br />
+					phone: {{phone}}<br />
+					socialMedia: {{socialMedia}}<br />
+					summary: {{summary}}<br />
+					description: {{description}}<br />
+					associateAgencies: {{associateAgencies}}<br />
 					topic: {{topic}}<br />
-					{{#if contactPhoto}}<img src="{{cloudinaryUrl contactPhoto width='300' height='300'}}" class="img-rounded">{{/if}}<br />
-          {{#if video}}<iframe width="420" height="315" src="{{video}}" frameborder="0" allowfullscreen></iframe>{{/if}}<br />
+					keywords: {{keywords}}<br />
 				</div>
 				{{/each}}
 			</div>
