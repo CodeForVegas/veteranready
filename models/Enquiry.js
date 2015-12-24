@@ -13,15 +13,21 @@ var Enquiry = new keystone.List('Enquiry', {
 
 Enquiry.add({
 	name: { type: Types.Name, required: true },
-	email: { type: Types.Email, required: true },
-	phone: { type: String },
+	group: { type: Types.Select, options: [
+         { value: 'veteran', label: 'An Individual Veteran' },
+         { value: 'representative', label: 'Representing a Business or Organization'}
+	] },
+  email: { type: Types.Email, required: true, match: /.+@.+\..+/, lowercase: true },
+	phone: { type: String, match: /^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$/ },
 	enquiryType: { type: Types.Select, options: [
-		{ value: 'message', label: 'Just leaving a message' },
-		{ value: 'question', label: 'I\'ve got a question' },
-		{ value: 'other', label: 'Something else...' }
+		{ value: 'services', label: 'Our Services' },
+		{ value: 'events', label: 'Post an Event' },
+		{ value: 'resources', label: 'Share a Resource' },
+		{ value: 'mentorship', label: 'Mentorship or Apprenticeship Opportunities' },
+		{ value: 'other', label: 'Something Else' }
 	] },
 	message: { type: Types.Markdown, required: true },
-	createdAt: { type: Date, default: Date.now }
+	createdAt: { type: Date, default: Date(Date.now()) }
 });
 
 Enquiry.schema.pre('save', function(next) {
@@ -36,17 +42,17 @@ Enquiry.schema.post('save', function() {
 });
 
 Enquiry.schema.methods.sendNotificationEmail = function(callback) {
-	
+
 	if ('function' !== typeof callback) {
 		callback = function() {};
 	}
-	
+
 	var enquiry = this;
-	
+
 	keystone.list('User').model.find().where('isAdmin', true).exec(function(err, admins) {
-		
+
 		if (err) return callback(err);
-		
+
 		new keystone.Email('enquiry-notification').send({
 			to: admins,
 			from: {
@@ -56,9 +62,9 @@ Enquiry.schema.methods.sendNotificationEmail = function(callback) {
 			subject: 'New Enquiry for Veteran Ready',
 			enquiry: enquiry
 		}, callback);
-		
+
 	});
-	
+
 };
 
 Enquiry.defaultSort = '-createdAt';

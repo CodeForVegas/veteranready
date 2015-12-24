@@ -31,25 +31,32 @@
 								<span class="sr-only">Toggle navigation</span>
 								<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 							</button>
-							<div id="logo"><img src="/images/VRlogo_no_white.png" width="200" height="105"></div>
-							<div id="logo-text">
-                <h3 style="color:#000000;">Building Veteran Strong Communities</h3>
-              </div>
-<!--				  <a href="/" class="navbar-brand">Veteran Ready</a>  -->
+							<div class="media">
+							  <div class="media-left media-middle">
+							    <a href="#">
+							      <img class="media-object" src="/images/VRlogo_no_white.png" width= "200" height="105" alt="Veteran Ready Logo" style="margin-bottom:15px; margin-right:15px;">
+							    </a>
+							  </div>
+							  <div class="media-body" style="padding-top:11px;">
+									<br>
+							    <p class="media-heading visible-xs-block visible-sm-block visible-md-block visible-lg-inline" style="color:#000000; font-size:2vw; margin-right:4px;"><b>Building Veteran Strong</b></p>
+									<p class="media-heading visible-xs-block visible-sm-block visible-md-block visible-lg-inline" style="color:#000000; font-size:2vw;"><b>Communities in Nevada</b></p>
+							  </div>
+							</div>
 						</div>
 						<div class="collapse navbar-collapse">
 							<ul class="nav navbar-nav navbar-left">
 									{{# each navLinks}}
 									<li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
-										<a href="{{ href }}">{{ label }}</a>
+										<a href="{{ href }}"><b>{{ label }}</b></a>
 									</li>
 								{{/each}}
 							</ul>
 							<ul class="nav navbar-nav navbar-right">
 								{{#if user}}
-								<li><a href="/keystone/signout">Sign Out</a></li>
+								<li><a href="/keystone/signout"><b>Sign Out</b></a></li>
 								{{else}}
-								<li><a href="/keystone/signin">Sign In</a></li>
+								<li><a href="/keystone/signin"><b>Sign In</b></a></li>
 								{{/if}}
 							</ul>
 						</div>
@@ -91,8 +98,13 @@
 		</div>
 		<div class="container">
 			<div id="footer">
-				<h4><b>Veteran Ready</b>: Building veteran-strong communities through training, collaboration and progessive thinking.</h4>
+				<h4><b>Veteran Ready</b>: Building veteran-strong communities through training, collaboration and progressive thinking.</h4>
 				<h4>© 2015 by Veteran Ready.</h4>
+				<div style="margin-bottom:10px;">
+					<a href="https://www.facebook.com/VeteranReadyNV"><img src="Facebook.ico" alt="Facebook icon"></a>
+					<a href="https://www.linkedin.com/in/annieemprima"><img src="Linkedin.ico" alt="LinkedIn icon"></a>
+					<a href="https://twitter.com/VeteranReady"><img src="Twitter.ico"  alt="Twitter icon"></a>
+				</div>
 				<p>Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.</p>
 			</div>
 		</div>
