@@ -1,33 +1,29 @@
 <div class="container">
 </div>
 <div class="container">
-	<div class="row">
-		<div class="col-sm-8 col-md-9">
-			<h4 class="text-weight-normal">Showing {{data.agency.length}} Community Partners.</h4>
-			<div class="blog">
-				{{#each data.agency}}
-				<div class="post">
-          <h2>{{name}}</h2>
-					{{#if logo}}<img src="{{cloudinaryUrl logo width='300'}}" class="img-responsive">{{/if}}<br />
-					{{#if video}}<iframe width="420" height="315" src="{{video}}" frameborder="0" allowfullscreen></iframe>{{/if}}<br />
-					contactName: {{contactName}}<br />
-					contactTitle: {{contactTitle}}<br />
-					contactMilitaryService: {{contactMilitaryService}}<br />
-					{{#if contactPhoto}}<img src="{{cloudinaryUrl contactPhoto width='300'}}" class="img-responsive">{{/if}}<br />
-					website: {{website}}<br />
-					email: {{email}}<br />
-          address: {{address}}<br />
-					phone: {{phone}}<br />
-					socialMedia: {{socialMedia}}<br />
-					summary: {{summary}}<br />
-					description: {{description}}<br />
-					associateAgencies: {{associateAgencies}}<br />
-					topic: {{topic}}<br />
-					keywords: {{keywords}}<br />
-				</div>
-				{{/each}}
-			</div>
+	<h1 class="text-center">Showing {{data.agency.length}} Community Partners.</h1>
+	<div class="blog">
+		{{#each data.agency}}
+		<div class="post">
+      <h2>{{name}}</h2>
+			{{#if logo}}<img src="{{cloudinaryUrl logo width='300'}}" class="img-responsive">{{/if}}<br />
+			{{#if video}}<iframe width="420" height="315" src="{{video}}" frameborder="0" allowfullscreen></iframe>{{/if}}<br />
+			Contact Name: {{contactName}}<br />
+			Contact Title: {{contactTitle}}<br />
+			Contact Military Service: {{contactMilitaryService}}<br />
+			{{#if contactPhoto}}<img src="{{cloudinaryUrl contactPhoto width='300'}}" class="img-responsive">{{/if}}<br />
+			Website: {{website}}<br />
+			Email: {{email}}<br />
+      Address: {{address}}<br />
+			Phone Number: {{phone}}<br />
+			Social Media: {{socialMedia}}<br />
+			Summary: {{summary}}<br />
+			Description: {{description}}<br />
+			Associated Agencies: {{associateAgencies}}<br />
+			Topic: {{topic}}<br />
+			Keywords: {{keywords}}<br />
 		</div>
+		{{/each}}
 	</div>
 	{{>pagination}}
 </div>
