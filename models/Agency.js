@@ -28,23 +28,22 @@ Agency.add({
 
 Agency.schema.pre('save', function(next) {
   console.log("RUNNING PRESAVE HOOK");
-  var re = /https*:\/\/www.youtube.com\/watch\?v=(.*)$/
-  if (this.video.match(re)) {
+  var youtube = /https*:\/\/www.youtube.com\/watch\?v=(.*)$/
+  if (this.video.match(youtube)) {
     this.video = this.video.replace("watch?v=", "embed/");
+  }
+  next();
+});
+
+Agency.schema.pre('save', function(next) {
+  console.log("RUNNING PRESAVE HOOK");
+  var vimeo = /https*:\/\/vimeo.com\/(.*)$/
+  if (this.video.match(vimeo)) {
+    var urlParts = this.video.split('/');
+    this.video = "https://player.vimeo.com/video/" + urlParts[urlParts.length-1];
   }
   next();
 });
 
 Agency.defaultColumns = 'name, email, address, summary, topic, contactName, approved';
 Agency.register();
-
-/* We want to be able to select multiple options from the list of topics, but Types.Select only allows one.
-  http://keystonejs.com/docs/database/#relationships
-  http://keystonejs.com/docs/database/#relationship-fields
-  topic: { type: Types.Relationship, label: 'Topics', ref: 'Post', many: true },
-  topic: { type: Types.Relationship, ref: 'existingModel', filters: { group: ':relevantGroup' } }
-
-  https://docs.mongodb.org/manual/tutorial/model-data-for-keyword-search/#model-data-to-support-keyword-search
-  https://docs.mongodb.org/manual/core/index-multikey/#multikey-indexes
-  https://docs.mongodb.org/getting-started/node/query/#find-or-query-data-with-node-js
-*/
