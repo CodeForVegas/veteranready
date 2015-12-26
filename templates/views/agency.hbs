@@ -13,7 +13,11 @@
 			<div class="container" style="margin-top:5%;">
 				<div class="col-md-6">
 					{{#if logo}}<img src="{{cloudinaryUrl logo width='300'}}" class="img-responsive">{{/if}}<br />
-					{{#if video}}<iframe width="300" height="220" src="{{video}}" frameborder="0" allowfullscreen></iframe>{{/if}}<br />
+					{{#if video}}
+            <div class="responsiveIframe">
+              <iframe src="{{video}}" allowfullscreen></iframe>
+            </div>
+          {{/if}}<br />
 					Contact Name: {{contactName}}<br />
 					Contact Title: {{contactTitle}}<br />
 					Contact Military Service: {{contactMilitaryService}}<br />
