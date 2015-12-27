@@ -19,9 +19,9 @@
           </div>
         {{/if}}<br />
 				Contact Name: {{contactName}}<br />
-				Contact Title: {{contactTitle}}<br />
+				{{#if contactPhoto}}<img src="{{cloudinaryUrl contactPhoto width='300'}}" class="img-responsive" style="margin-top:10px;">{{/if}}<br />
+        Contact Title: {{contactTitle}}<br />
 				Contact Military Service: {{contactMilitaryService}}<br />
-				{{#if contactPhoto}}<img src="{{cloudinaryUrl contactPhoto width='300'}}" class="img-responsive">{{/if}}<br />
 			</div>
 			<div class="col-md-6">
 				Website: {{website}}<br />
