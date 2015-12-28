@@ -17,10 +17,12 @@
             <iframe src="{{video}}" allowfullscreen></iframe>
           </div>
         {{/if}}<br />
-				Contact Name: {{contactName}}<br />
-				{{#if contactPhoto}}<img src="{{cloudinaryUrl contactPhoto width='300'}}" class="img-responsive" style="margin-top:10px;">{{/if}}<br />
-        Contact Title: {{contactTitle}}<br />
-				Contact Military Service: {{contactMilitaryService}}<br />
+        <div class="thumbnail col-md-8 col-md-offset-2">
+  				Contact Name: {{contactName}}<br />
+  				{{#if contactPhoto}}<img src="{{cloudinaryUrl contactPhoto width='400'}}" class="img-responsive" style="margin-top:10px;">{{/if}}<br />
+          Contact Title: {{contactTitle}}<br />
+  				Contact Military Service: {{contactMilitaryService}}<br />
+        </div>
 			</div>
 			<div class="col-md-6">
         <div class="col-md-8 col-md-offset-2">
