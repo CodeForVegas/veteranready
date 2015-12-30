@@ -10,6 +10,7 @@
 	<div class="container text-center">
     {{#each data.agency}}
     <h2>{{name}}</h2>
+    <h3><a target="_blank" href="{{website}}">{{website}}</a></h3>
 		<div class="container" style="margin-top:5%;">
 			<div class="col-md-6">
 				{{#if video}}
@@ -29,12 +30,13 @@
         </div>
 			</div>
 			<div class="col-md-6">
-        <div class="col-md-8 col-md-offset-2">
-          {{#if logo}}<img src="{{cloudinaryUrl logo width='400'}}" class="img-responsive">{{/if}}<br />
+        <div class="col-md-8 col-md-offset-2" style="margin-bottom:5%;">
+          {{#if logo}}
+            <img src="{{cloudinaryUrl logo width='400'}}" class="img-responsive">
+          {{/if}}
         </div>
         <div class="thumbnail right-caption span6">
           <div class="caption">
-      			Website: {{website}}<br />
       			Email: {{email}}<br />
             Address: {{address}}<br />
       			Phone Number: {{phone}}<br />
