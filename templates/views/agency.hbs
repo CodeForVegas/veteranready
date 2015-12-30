@@ -18,10 +18,14 @@
           </div>
         {{/if}}<br />
         <div class="thumbnail col-md-8 col-md-offset-2">
-  				Contact Name: {{contactName}}<br />
-  				{{#if contactPhoto}}<img src="{{cloudinaryUrl contactPhoto width='400'}}" class="img-responsive" style="margin-top:10px;">{{/if}}<br />
-          Contact Title: {{contactTitle}}<br />
-  				Contact Military Service: {{contactMilitaryService}}<br />
+  				<h3>{{contactName}}</h3>
+  				{{#if contactPhoto}}
+            <img src="{{cloudinaryUrl contactPhoto width='400'}}" class="img-responsive" style="margin-top:10px;">
+          {{/if}}
+          <h3>{{contactTitle}}</h3>
+  				{{#if contactMilitaryService}}
+            <h3>{{contactMilitaryService}}</h3>
+          {{/if}}
         </div>
 			</div>
 			<div class="col-md-6">
