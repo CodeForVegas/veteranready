@@ -43,7 +43,6 @@
             <h4>{{address.street1}} {{address.street2}}</h4>
             <h4>{{address.suburb}} {{address.state}} {{address.postcode}}</h4>
       			<h4>{{phone}}</h4>
-      			<h4>Social Media: <a target="_blank" href="{{socialMedia}}">{{socialMedia}}</a></h4>
       			<h4>{{summary}}</h4>
       			<h4>{{description}}</h4>
             {{#if associateAgencies}}
@@ -54,6 +53,29 @@
       			<h4>Search Keywords: {{keywords}}</h4>
             {{/if}}
           </div>
+          <ul class="list-inline">
+            {{#if facebook}}
+              <li><a target="_blank" href="{{facebook}}"><img src="Facebook.ico" alt="Facebook icon"></a></li>
+            {{/if}}
+            {{#if linkedin}}
+              <li><a target="_blank" href="{{linkedin}}"><img src="Linkedin.ico" alt="LinkedIn icon"></a></li>
+            {{/if}}
+            {{#if twitter}}
+              <li><a target="_blank" href="{{twitter}}"><img src="Twitter.ico" alt="Twitter icon"></a></li>
+            {{/if}}
+            {{#if googlePlus}}
+              <li><a target="_blank" href="{{googlePlus}}"><img src="GooglePlus.png" alt="Google Plus icon"></a></li>
+            {{/if}}
+            {{#if instagram}}
+              <li><a target="_blank" href="{{instagram}}"><img src="Instagram.png" alt="Instagram icon"></a></li>
+            {{/if}}
+            {{#if youtube}}
+              <li><a target="_blank" href="{{youtube}}"><img src="Youtube.png" alt="YouTube icon"></a></li>
+            {{/if}}
+            {{#if wordpress}}
+              <li><a target="_blank" href="{{wordpress}}"><img src="Wordpress.png" alt="WordPress icon"></a></li>
+            {{/if}}
+          </ul>
         </div>
 			</div>
 		</div>
