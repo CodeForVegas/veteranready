@@ -30,22 +30,29 @@
         </div>
 			</div>
 			<div class="col-md-6">
-        <div class="col-md-8 col-md-offset-2" style="margin-bottom:5%;">
+        <div class="thumbnail col-md-8 col-md-offset-2" style="padding:5%; margin-bottom:5%;">
           {{#if logo}}
             <img src="{{cloudinaryUrl logo width='400'}}" class="img-responsive">
           {{/if}}
         </div>
         <div class="thumbnail right-caption span6">
           <div class="caption">
-      			<p>Email: {{email}}</p>
-            <p>Address: {{address}}</p>
-      			<p>Phone Number: {{phone}}</p>
-      			<p>Social Media: {{socialMedia}}</p>
-      			<p>Summary: {{summary}}</p>
-      			<p>Description: {{description}}</p>
-      			<p>Associated Agencies: {{associateAgencies}}</p>
-      			<p>Topic: {{topic}}</p>
-      			<p>Keywords: {{keywords}}</p>
+      			<h4>{{email}}</h4>
+            <h4>{{address.name}}</h4>
+            <h4>{{address.number}}</h4>
+            <h4>{{address.street1}} {{address.street2}}</h4>
+            <h4>{{address.suburb}} {{address.state}} {{address.postcode}}</h4>
+      			<h4>{{phone}}</h4>
+      			<h4>Social Media: <a target="_blank" href="{{socialMedia}}">{{socialMedia}}</a></h4>
+      			<h4>{{summary}}</h4>
+      			<h4>{{description}}</h4>
+            {{#if associateAgencies}}
+      			   <h4>We also have community ties with {{associateAgencies}}.</h4>
+            {{/if}}
+      			<h4>Our focus is on {{topic}}</h4>
+            {{#if keywords}}
+      			<h4>Search Keywords: {{keywords}}</h4>
+            {{/if}}
           </div>
         </div>
 			</div>
