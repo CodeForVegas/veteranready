@@ -30,6 +30,7 @@ Agency.add({
   contactMilitaryService: { type: String, required: false, index: false },
   keywords: { type: String, required: false, index:true },
   approved: { type: Types.Boolean, initial: true, index: true },
+  lastUpdated: { type: Types.Date, initial: true, index: true }
 });
 
 Agency.schema.pre('save', function(next) {
