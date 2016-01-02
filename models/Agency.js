@@ -52,5 +52,5 @@ Agency.schema.pre('save', function(next) {
   next();
 });
 
-Agency.defaultColumns = 'name, email, address, summary, topic, contactName, approved';
+Agency.defaultColumns = 'name, email, topic, contactName, approved, lastUpdated';
 Agency.register();
