@@ -48,6 +48,12 @@ h3 {
   color: #000000;
 }
 
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+}
+
 /* Custom styles for the About page */
 
 .thumbnail.right-caption > img {
