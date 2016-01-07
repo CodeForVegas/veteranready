@@ -1,21 +1,85 @@
+{{!< default}}
 <div class="container">
+  <div class="jumbotron">
+    <div class="container text-center" style="margin-top:-35px; margin-bottom:-30px">
+			<h2 class="text-center">Showing {{data.agency.length}} Community Partners</h2>
+    </div>
+  </div>
 </div>
 <div class="container">
-	<div class="row">
-		<div class="col-sm-8 col-md-9">
-			<h4 class="text-weight-normal">Showing {{data.agency.length}} Community Partners.</h4>
-			<div class="blog">
-				{{#each data.agency}}
-				<div class="post">
-          <h2>{{name}}</h2>
-          email: {{email}}<br />
-					topic: {{topic}}<br />
-					{{#if contactPhoto}}<img src="{{cloudinaryUrl contactPhoto width='300' height='300'}}" class="img-rounded">{{/if}}<br />
-          {{#if video}}<iframe width="420" height="315" src="{{video}}" frameborder="0" allowfullscreen></iframe>{{/if}}<br />
-				</div>
-				{{/each}}
+	<div class="container text-center">
+    {{#each data.agency}}
+    <h2>{{name}}</h2>
+    <h3><a target="_blank" href="{{website}}">{{website}}</a></h3>
+		<div class="container" style="margin-top:5%;">
+			<div class="col-md-6">
+				{{#if video}}
+          <div class="responsiveIframe">
+            <iframe src="{{video}}" allowfullscreen></iframe>
+          </div>
+        {{/if}}<br />
+        <div class="thumbnail col-md-8 col-md-offset-2">
+  				<h3>{{contactName}}</h3>
+  				{{#if contactPhoto}}
+            <img src="{{cloudinaryUrl contactPhoto width='400'}}" class="img-responsive" style="margin-top:10px;">
+          {{/if}}
+          <h3>{{contactTitle}}</h3>
+  				{{#if contactMilitaryService}}
+            <h3>{{contactMilitaryService}}</h3>
+          {{/if}}
+        </div>
+			</div>
+			<div class="col-md-6">
+        <div class="thumbnail col-md-8 col-md-offset-2" style="padding:5%; margin-bottom:5%;">
+          {{#if logo}}
+            <img src="{{cloudinaryUrl logo width='400'}}" class="img-responsive">
+          {{/if}}
+        </div>
+        <div class="thumbnail right-caption span6">
+          <div class="caption">
+      			<h4>{{email}}</h4>
+            <h4>{{address.name}}</h4>
+            <h4>{{address.number}}</h4>
+            <h4>{{address.street1}} {{address.street2}}</h4>
+            <h4>{{address.suburb}} {{address.state}} {{address.postcode}}</h4>
+      			<h4>{{phone}}</h4>
+      			<h4>{{summary}}</h4>
+      			<h4>{{description}}</h4>
+            {{#if associateAgencies}}
+      			   <h4>We also have community ties with {{associateAgencies}}.</h4>
+            {{/if}}
+      			<h4>Our focus is on {{topic}}</h4>
+            {{#if keywords}}
+      			<h4>Search Keywords: {{keywords}}</h4>
+            {{/if}}
+          </div>
+          <ul class="list-inline">
+            {{#if facebook}}
+              <li><a target="_blank" href="{{facebook}}"><img src="Facebook.ico" alt="Facebook icon"></a></li>
+            {{/if}}
+            {{#if linkedin}}
+              <li><a target="_blank" href="{{linkedin}}"><img src="Linkedin.ico" alt="LinkedIn icon"></a></li>
+            {{/if}}
+            {{#if twitter}}
+              <li><a target="_blank" href="{{twitter}}"><img src="Twitter.ico" alt="Twitter icon"></a></li>
+            {{/if}}
+            {{#if googlePlus}}
+              <li><a target="_blank" href="{{googlePlus}}"><img src="GooglePlus.png" alt="Google Plus icon"></a></li>
+            {{/if}}
+            {{#if instagram}}
+              <li><a target="_blank" href="{{instagram}}"><img src="Instagram.png" alt="Instagram icon"></a></li>
+            {{/if}}
+            {{#if youtube}}
+              <li><a target="_blank" href="{{youtube}}"><img src="Youtube.png" alt="YouTube icon"></a></li>
+            {{/if}}
+            {{#if wordpress}}
+              <li><a target="_blank" href="{{wordpress}}"><img src="Wordpress.png" alt="WordPress icon"></a></li>
+            {{/if}}
+          </ul>
+        </div>
 			</div>
 		</div>
+    {{/each}}
 	</div>
 	{{>pagination}}
 </div>

@@ -18,13 +18,11 @@ describe('Agencies', function() {
 
   var agency = {
     name: "Test Agency",
-    contactName: "Jane Contact",
     email: "agency@test.com",
-    summary: "This is a test.",
-    contactPhoto: "http://res.cloudinary.com/dnar4muay/image/upload/h_300,w_300/mllby5kadaasbmjsltmf.jpg",
-    video: "http://agencytest.com",
     topic: "All",
-    approved: true
+    contactName: "Jane Contact",
+    approved: true,
+    lastUpdated: "2016-01-03"
   };
 
   beforeEach(function(done){
@@ -49,27 +47,23 @@ describe('Agencies', function() {
   it('should be a valid agency', function(done) {
     agency.should.be.a('Object');
     agency.should.have.property('name');
-    agency.should.have.property('contactName');
     agency.should.have.property('email');
-    agency.should.have.property('summary');
-    agency.should.have.property('contactPhoto');
-    agency.should.have.property('video');
     agency.should.have.property('topic');
+    agency.should.have.property('contactName');
     agency.should.have.property('approved');
+    agency.should.have.property('lastUpdated');
     done();
   });
 
   it("should register a new agency", function(done){
     Agency.should.have.property('register').be.a('Function');
-    Agency.register("Next Agency", "nextagency@test.com", "http://res.cloudinary.com/dnar4muay/image/upload/h_300,w_300/mllby5kadaasbmjsltmf.jpg", "http://nextagency.com", "All", true, function(nextAgency) {
+    Agency.register("Next Agency", "nextagency@test.com", "All", "Jane Contact", true, "2016-01-03", function(nextAgency) {
       nextAgency.name.should.equal("Next Agency");
-      nextAgency.contactName.should.equal("Jane Contact");
       nextAgency.email.should.equal("nextagency@test.com");
-      nextAgency.summary.should.equal("This is a test.");
-      nextAgency.contactPhoto.should.equal("http://res.cloudinary.com/dnar4muay/image/upload/h_300,w_300/mllby5kadaasbmjsltmf.jpg");
-      nextAgency.video.should.equal("http://nextagency.com");
       nextAgency.topic.should.equal("All");
-      nextAgency.isAdmin.should.equal(true);
+      nextAgency.contactName.should.equal("Jane Contact");
+      nextAgency.approved.should.equal(true);
+      nextAgency.lastUpdated.should.equal("2016-01-03");
       done();
     })
     done();
