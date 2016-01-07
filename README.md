@@ -1,11 +1,11 @@
 #### The database has already been built, but just for reference...
 #### To create the database, open a terminal, cd to the project directory, and type:
 
-1. mongorestore --db veteran-ready dump/veteran-ready
+1. mongorestore --db veteran_ready dump/veteran_ready
 
 #### To dump current data:
 
-1. mongodump -d veteran-ready
+1. mongodump -d veteran_ready
 
 #### To run, open a terminal, cd to the project directory, and type:
 
