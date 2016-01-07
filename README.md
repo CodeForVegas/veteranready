@@ -1,8 +1,11 @@
 #### The database has already been built, but just for reference...
 #### To create the database, open a terminal, cd to the project directory, and type:
 
-1. tar -zxvf mongo.tgz (You don't need to do this if the veteranMongo directory already exists.)
-2. mongorestore --db veteran-ready veteranMongo/
+1. mongorestore --db veteran-ready dump/veteran-ready
+
+#### To dump current data:
+
+1. mongodump -d veteran-ready
 
 #### To run, open a terminal, cd to the project directory, and type:
 
