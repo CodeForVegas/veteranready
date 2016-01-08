@@ -26,6 +26,7 @@
 2. You may need to have MongoDB running in a separate terminal for the application to start. You can find instructions for installing and running MongoDB on OSX at https://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/. If you are using Linux or Windows, find the appropriate link on the left side of the page. I'm building this site with a Mac, so Windows or Linux users may have to jump through some hoops to get the project up and running on their machine.
 
 3. You will need to create a .env file in your main directory. It may contain all of the following:
+
 - COOKIE_SECRET={a random string to encrypt cookies}
 - CLOUDINARY_URL={your cloudinary url}
 - MANDRILL_APIKEY={your mandrill api key}
