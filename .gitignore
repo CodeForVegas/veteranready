@@ -29,3 +29,6 @@ node_modules
 
 # Ignore .DS_Store files on OS X
 .DS_Store
+
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
+.idea
