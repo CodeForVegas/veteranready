@@ -1,4 +1,5 @@
 var keystone = require('keystone');
+var cloudinary = require('cloudinary');
 
 exports = module.exports = function(req, res) {
 

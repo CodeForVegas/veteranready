@@ -1,6 +1,8 @@
 var keystone = require('keystone'),
     Types = keystone.Field.Types;
 
+var cloudinary = require('cloudinary');
+
 var Agency = new keystone.List('Agency', {
 	autokey: { from: 'name', path: 'key', unique: true }
 });
