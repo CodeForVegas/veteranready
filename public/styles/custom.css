@@ -9,12 +9,7 @@ p {
   background-color: #f5f5f5;
 }
 
-h2 {
-  color: #003057;
-  /* color: #695b24; */
-}
-
-h3 {
+h1, h2, h3 {
   color: #003057;
   /* color: #695b24; */
 }
