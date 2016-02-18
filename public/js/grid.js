@@ -188,7 +188,7 @@ var Grid = (function() {
 			'transition' : 'transitionend'
 		},
 		transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
-		// support for csstransitions
+		// support for css transitions
 		support = Modernizr.csstransitions,
 		// default settings
 		settings = {
@@ -209,7 +209,7 @@ var Grid = (function() {
 			saveItemInfo( true );
 			// get window´s size
 			getWinSize();
-			// initialize some events
+			// initialize events
 			initEvents();
 
 		} );
@@ -217,7 +217,7 @@ var Grid = (function() {
 	}
 
 	// add more items to the grid.
-	// the new items need to appended to the grid.
+	// the new items need to be appended to the grid.
 	// after that call Grid.addItems(theItems);
 	function addItems( $newitems ) {
 
