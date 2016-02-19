@@ -7,7 +7,24 @@
   </div>
 </div>
 <div class="container">
-
+    <ul id="og-grid" class="og-grid">
+    {{#each data.agency}}
+    <li>
+        <a href="{{website}}" data-largesrc="{{cloudinaryUrl contactPhoto width='400'}}" data-title="{{name}}" data-description="{{summary}}">
+            <img src="{{cloudinaryUrl logo width='200'}}" class="img-responsive" alt="{{name}}"/>
+        </a>
+        <div class="og-expander">
+            <div class="og-expander-inner">
+                <span class="og-close"></span>
+                <div class="og-fullimg">
+                    <div class="og-loading"></div>
+                    <img src="images/1.jpg">
+                </div>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+    </ul>
 <!-- Grid setup with demo content and no handlebars
     <ul id="og-grid" class="og-grid">
         <li>
