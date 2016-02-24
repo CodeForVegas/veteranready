@@ -1,4 +1,4 @@
-/* https://codepen.io/gabrieleromanato/pen/dDyzH
+/* https://codepen.io/gabrieleromanato/pen/dDyzH */
 
 (function( $ ) {
 	$.imagePreview = function( element ) {
@@ -64,10 +64,10 @@
 	});
 
 })( jQuery );
-*/
 
 
-/* http://codepen.io/SitePoint/pen/EabNrX */
+
+/* http://codepen.io/SitePoint/pen/EabNrX
 
 // Demo by Dan Rose.
 // See: http://www.sitepoint.com/recreating-google-images-search-layout-css
@@ -122,7 +122,7 @@ $cell.find('.expand__close').click(function(){
 
   $thisCell.removeClass('is-expanded').addClass('is-collapsed');
 });
-
+*/
 
 
 /*
