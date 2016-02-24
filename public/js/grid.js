@@ -1,4 +1,5 @@
-/* https://codepen.io/gabrieleromanato/pen/dDyzH */
+/* https://codepen.io/gabrieleromanato/pen/dDyzH
+
 (function( $ ) {
 	$.imagePreview = function( element ) {
 		this.$element = $( element );
@@ -63,13 +64,15 @@
 	});
 
 })( jQuery );
+*/
+
 
 /* http://codepen.io/SitePoint/pen/EabNrX */
 
 // Demo by Dan Rose.
 // See: http://www.sitepoint.com/recreating-google-images-search-layout-css
 
-/*
+
 // dynamically create loads of image cells
 function cells(count) {
   if (typeof count !== 'number' || count > 99) return false;
@@ -119,7 +122,7 @@ $cell.find('.expand__close').click(function(){
 
   $thisCell.removeClass('is-expanded').addClass('is-collapsed');
 });
-*/
+
 
 
 /*
