@@ -83,6 +83,11 @@ b:hover {
 	z-index: 3;
 }
 
+/* Allows for carousel side controls to be hidden */
+
+.carousel .carousel-control { visibility: hidden; }
+.carousel:hover .carousel-control { visibility: hidden; }
+
 /* Custom styles for the About page */
 
 .thumbnail.right-caption > img {
