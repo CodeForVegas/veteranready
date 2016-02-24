@@ -1,6 +1,39 @@
 {{!< default}}
-<!-- https://codepen.io/gabrieleromanato/pen/dDyzH -->
-
+<div class="container">
+  <div class="jumbotron">
+    <div class="container text-center" style="margin-top:-35px; margin-bottom:-30px">
+		<h2 class="text-center">Showing {{data.agency.length}} Community Partners</h2>
+    </div>
+  </div>
+</div>
+<div class="container">
+    <div id="images">
+    	<ul id="image-wrapper">
+    		<li>
+                {{#each data.agency}}
+                    <figure data-title="{{name}}" data-desc="{{summary}}">
+                        <a href="#" class="image-link">
+                            <img src="{{cloudinaryUrl logo width='200'}}" class="img-responsive" alt="{{name}}"/>
+                        </a>
+                    </figure>
+                {{/each}}
+                <div class="image-details">
+                    <a href="#" class="image-details-close">Close</a>
+                    <div class="image-details-content">
+                        <figure class="image"></figure>
+                    </div>
+                    <div class="image-details-desc">
+                        <h3 class="image-details-title"></h3>
+                        <p class="image-details-text"></p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<script src="/js/jquery/jquery-1.11.3.min.js"></script>
+<script src="js/grid.js"></script>
+<!-- https://codepen.io/gabrieleromanato/pen/dDyzH
 <div id="images">
 	<ul id="image-wrapper">
 		<li>
@@ -71,6 +104,7 @@
 </div>
 <script src="/js/jquery/jquery-1.11.3.min.js"></script>
 <script src="js/grid.js"></script>
+-->
 
 
 <!-- http://codepen.io/SitePoint/pen/EabNrX
