@@ -51,10 +51,11 @@ img {
 	max-width:100%;
 	width:100%;
 	cursor:pointer;
+	padding: 1em;
 }
 .superbox-show {
 	text-align:center;
-	position:relative;
+	position:relative;;
 	background:#333;
 	box-shadow:inset 0 1px 5px #111;
 	-webkit-box-shadow:inset 0 1px 5px #111;
