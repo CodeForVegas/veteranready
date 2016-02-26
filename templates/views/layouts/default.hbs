@@ -116,11 +116,34 @@
 			//- you can upgrade to 2.1.4 (also bundled) for better performance.
 		--}}
 		<script src="/js/jquery/jquery-1.11.3.min.js"></script>
+		<!-- Mustache.js library script source
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js" type="text/javascript"></script>
+        -->
 		{{!--
 			//- Customise which Bootstrap javascript files are served by including
 			//- them specifically here, instead of bootstrap-3.3.5.min.js
 		--}}
 		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
 		{{{isAdminEditorJS user}}}
+		
+		<!-- JSON fetches code
+        <script type="text/javascript">
+            $(function() {
+                $.getJSON('data.json', function(data) {
+                    var template = $('#speakerstpl').html();
+                    var html = Mustache.to_html(template, data);
+                    $('#carousel').html(html);
+                    $('#carousel').cycle({
+                        fx: 'fade',
+                        pause: 1,
+                        next: '#next_btn',
+                        prev: '#prev_btn',
+                        speed: 500,
+                        timeout: 10000
+                    });
+                }); //getJSON
+            }); //function
+         -->
+			
 	</body>
 </html>
