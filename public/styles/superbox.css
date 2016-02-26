@@ -33,13 +33,6 @@ img {
 	max-width:1280px;
 	margin:0 auto;
 }
-.logo {
-	margin:25px 0;
-	text-align:center;
-}
-.logo-img {
-	max-width:95%;
-}
 /* SuperBox */
 .superbox-list {
 	display:inline-block;
@@ -71,10 +64,7 @@ img {
 	border:1px solid #222;
 }
 .superbox-img:hover {
-	opacity:0.8;
-}
-.superbox-float {
-	float:left;
+	opacity:0.5;
 }
 .superbox-close {
 	opacity:0.7;
