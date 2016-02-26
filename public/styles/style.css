@@ -21,7 +21,7 @@
 	text-rendering:optimizeLegibility;
 }
 body {
-	background:#e16461;
+	background:inherit;
 }
 ul {
 	list-style:none;
