@@ -8,7 +8,10 @@
 <div class="superbox text-center">
 	{{#each data.agency}}
 		<div class="superbox-list">
-			<img src="{{cloudinaryUrl logo width='160'}}" data-img="{{cloudinaryUrl contactPhoto width='400'}}" alt={{name}}"" class="superbox-img">
+            <h2>{{name}}</h2>
+            <div class="thumbnail" style="height:320px; width=200px;">
+			    <img src="{{cloudinaryUrl logo width='160'}}" data-img="{{cloudinaryUrl contactPhoto width='400'}}" alt={{name}}"" class="superbox-img">
+            </div>
 		</div>
 	{{/each}}
 </div>

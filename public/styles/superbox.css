@@ -27,7 +27,7 @@ ul {
 	list-style:none;
 }
 img {
-	vertical-align:bottom;
+	vertical-align:center;
 }
 .wrapper {
 	max-width:1280px;
@@ -45,6 +45,11 @@ img {
 	width:100%;
 	cursor:pointer;
 	padding: 1em;
+	position: relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 .superbox-show {
 	text-align:center;
