@@ -131,14 +131,6 @@ padding-top: 1%;
 
 /* Partners (Agency) page also uses .responsiveIframe class for videos */
 
-/* Vertically center Agency logo images inside thumbnail div
-.vertical-center {
-	display: flex;
-	align-items: center;
-	float: none;
-}
-*/
-
 /* jQuery Carousel styling
 
 body {
