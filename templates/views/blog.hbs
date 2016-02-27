@@ -9,7 +9,14 @@
 <div class="container">
 	<div class="main">
 		<ul id="og-grid" class="og-grid">
+			{{#each data.agency}}
 			<li>
+				<a target="_blank" href="{{website}}" data-largesrc="{{cloudinaryUrl contactPhoto width='400'}}" data-title="{{name}}" data-description="{{summary}}">
+					<img src="{{cloudinaryUrl logo width='160'}}" alt="{{contactName}}"/>
+				</a>
+			</li>
+			{{/each}}
+<!--		<li>
 				<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
 					<img src="images/thumbs/1.jpg" alt="img01"/>
 				</a>
@@ -208,12 +215,11 @@
 				<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
 					<img src="images/thumbs/1.jpg" alt="img01"/>
 				</a>
-			</li>
+			</li> -->
 		</ul>
 	</div><!-- /main -->
 </div><!-- /container -->
 <script src="/js/jquery/jquery-1.11.3.min.js"></script>
-
 
 <!-- Original code below
 
