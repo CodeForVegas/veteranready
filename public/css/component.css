@@ -110,14 +110,14 @@
 
 .og-details h3 {
 	font-weight: 300;
-	font-size: 52px;
+	font-size: 40px;
 	padding: 40px 0 10px;
 	margin-bottom: 10px;
 }
 
 .og-details p {
-	font-weight: 400;
-	font-size: 16px;
+	font-weight: 300;
+	font-size: 20px;
 	line-height: 22px;
 	color: #999;
 }
@@ -191,5 +191,5 @@
 
 	.og-fullimg { display: none; }
 	.og-details { float: none; width: 100%; }
-	
+
 }
