@@ -1,3 +1,4 @@
+/*
 .og-grid {
 	list-style: none;
 	padding: 20px 0;
@@ -5,11 +6,19 @@
 	text-align: center;
 	width: 100%;
 }
+*/
+
+.og-grid {
+  padding: 20px 0;
+  display: flex; 
+  flex-wrap: wrap;
+  text-align: center; 
+  justify-content: center;
+}
 
 .og-grid li {
 	display: inline-block;
 	margin: 10px 5px 0 5px;
-	vertical-align: top;
 	height: 400px;
 	border: 1px solid;
 }

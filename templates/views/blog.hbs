@@ -11,8 +11,8 @@
 		<ul id="og-grid" class="og-grid">
 			{{#each data.agency}}
 			<li>
-				<a target="_blank" href="{{website}}" data-largesrc="{{cloudinaryUrl contactPhoto width='400'}}" data-title="{{name}}" data-description="{{summary}}">
-					<img src="{{cloudinaryUrl logo width='210'}}" alt="{{contactName}}"/>
+				<a href="{{website}}" data-largesrc="{{cloudinaryUrl contactPhoto width='400'}}" data-title="{{name}}" data-description="{{summary}}"  style="margin-top: 15px;">
+					<img src="{{cloudinaryUrl logo width='210' height='200' crop='fit'}}" alt="{{contactName}}" style="margin: auto;" />
 				</a>
                 <h3 style="margin-top:2vw; width:210px;">{{name}}</h3>
 			</li>
