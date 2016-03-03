@@ -345,7 +345,8 @@ var Grid = (function() {
 			// create Preview structure:
 			this.$title = $( '<h3></h3>' );
 			this.$summary = $( '<p></p>' );
-			var detailAppends = [this.$title, this.$summary];
+			this.$description = $( '<p></p>' );
+			var detailAppends = [ this.$title, this.$summary, this.$description ];
 			if (settings.showVisitButton === true) {
 				this.$href = $( '<a href="#">Visit website</a>' );
 				detailAppends.push(this.$href);
@@ -387,11 +388,13 @@ var Grid = (function() {
 					href : $itemEl.attr( 'href' ),
 					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
-					summary : $itemEl.data( 'summary' )
+					summary : $itemEl.data( 'summary' ),
+					description : $itemEl.data( 'description' )
 				};
 
 			this.$title.html( eldata.title );
 			this.$summary.html( eldata.summary );
+			this.$description.html( eldata.description );
 			if (settings.showVisitButton === true) {
 				this.$href.attr( 'href', eldata.href );
 			}
