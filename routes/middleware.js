@@ -32,9 +32,15 @@ exports.initLocals = function(req, res, next) {
 		{ label: 'Mentorship',        key: 'mentorship',  href: '/mentorship'},
 		{ label: 'Vet-Owned',         key: 'vobs',        href: '/vobs'},
 		{ label: 'Partners',		      key: 'agency',		  href: '/agency' },
+<<<<<<< HEAD
 		{ label: 'Contact',		        key: 'contact',		  href: '/contact' },
     { label: 'Blog',		          key: 'blog',		    href: '/blog' }
 /*	{ label: 'Gallery',		        key: 'gallery',		  href: '/gallery' },
+=======
+		{ label: 'Contact',		        key: 'contact',		  href: '/contact' }
+/*  { label: 'Blog',		          key: 'blog',		    href: '/blog' },
+  	{ label: 'Gallery',		        key: 'gallery',		  href: '/gallery' },
+>>>>>>> thumbnailGrid
 */
 	];
 

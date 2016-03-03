@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* https://codepen.io/gabrieleromanato/pen/dDyzH */
 
 (function( $ ) {
@@ -125,6 +126,8 @@ $cell.find('.expand__close').click(function(){
 */
 
 
+=======
+>>>>>>> thumbnailGrid
 /*
 * debouncedresize: special jQuery event that happens once after a window resize
 *
@@ -133,7 +136,11 @@ $cell.find('.expand__close').click(function(){
 *
 * Copyright 2011 @louis_remi
 * Licensed under the MIT license.
+<<<<<<< HEAD
 
+=======
+*/
+>>>>>>> thumbnailGrid
 var $event = $.event,
 $special,
 resizeTimeout;
@@ -315,11 +322,19 @@ var Grid = (function() {
 			'transition' : 'transitionend'
 		},
 		transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
+<<<<<<< HEAD
 		// support for css transitions
 		support = Modernizr.csstransitions,
 		// default settings
 		settings = {
 			minHeight : 500,
+=======
+		// support for csstransitions
+		support = Modernizr.csstransitions,
+		// default settings
+		settings = {
+			minHeight : 800,
+>>>>>>> thumbnailGrid
 			speed : 350,
 			easing : 'ease',
 			showVisitButton : true
@@ -336,7 +351,11 @@ var Grid = (function() {
 			saveItemInfo( true );
 			// get window´s size
 			getWinSize();
+<<<<<<< HEAD
 			// initialize events
+=======
+			// initialize some events
+>>>>>>> thumbnailGrid
 			initEvents();
 
 		} );
@@ -344,7 +363,11 @@ var Grid = (function() {
 	}
 
 	// add more items to the grid.
+<<<<<<< HEAD
 	// the new items need to be appended to the grid.
+=======
+	// the new items need to appended to the grid.
+>>>>>>> thumbnailGrid
 	// after that call Grid.addItems(theItems);
 	function addItems( $newitems ) {
 
@@ -471,8 +494,14 @@ var Grid = (function() {
 		create : function() {
 			// create Preview structure:
 			this.$title = $( '<h3></h3>' );
+<<<<<<< HEAD
 			this.$description = $( '<p></p>' );
 			var detailAppends = [this.$title, this.$description];
+=======
+			this.$summary = $( '<p></p>' );
+			this.$description = $( '<p></p>' );
+			var detailAppends = [ this.$title, this.$summary, this.$description ];
+>>>>>>> thumbnailGrid
 			if (settings.showVisitButton === true) {
 				this.$href = $( '<a href="#">Visit website</a>' );
 				detailAppends.push(this.$href);
@@ -514,10 +543,18 @@ var Grid = (function() {
 					href : $itemEl.attr( 'href' ),
 					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
+<<<<<<< HEAD
+=======
+					summary : $itemEl.data( 'summary' ),
+>>>>>>> thumbnailGrid
 					description : $itemEl.data( 'description' )
 				};
 
 			this.$title.html( eldata.title );
+<<<<<<< HEAD
+=======
+			this.$summary.html( eldata.summary );
+>>>>>>> thumbnailGrid
 			this.$description.html( eldata.description );
 			if (settings.showVisitButton === true) {
 				this.$href.attr( 'href', eldata.href );
@@ -647,4 +684,7 @@ var Grid = (function() {
 	};
 
 })();
+<<<<<<< HEAD
 */
+=======
+>>>>>>> thumbnailGrid

@@ -33,8 +33,13 @@ exports = module.exports = function(req, res) {
 
 };
 
+<<<<<<< HEAD
 // Original code is below
 /*
+=======
+/* Original code below
+
+>>>>>>> thumbnailGrid
 var keystone = require('keystone');
 var async = require('async');
 
