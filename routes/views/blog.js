@@ -33,7 +33,6 @@ exports = module.exports = function(req, res) {
 
 };
 
-<<<<<<< HEAD
 // Original code is below
 /*
 =======
