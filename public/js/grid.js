@@ -192,7 +192,7 @@ var Grid = (function() {
 		support = Modernizr.csstransitions,
 		// default settings
 		settings = {
-			minHeight : 500,
+			minHeight : 800,
 			speed : 350,
 			easing : 'ease',
 			showVisitButton : true
