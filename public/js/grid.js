@@ -1,133 +1,3 @@
-<<<<<<< HEAD
-/* https://codepen.io/gabrieleromanato/pen/dDyzH */
-
-(function( $ ) {
-	$.imagePreview = function( element ) {
-		this.$element = $( element );
-		this.init();
-	};
-
-	$.imagePreview.prototype = {
-		init: function() {
-			this.$triggers = this.$element.find( ".image-link" );
-			this.$closeLinks = this.$element.find( ".image-details-close" );
-
-			this.open();
-			this.close();
-		},
-
-		_getContent: function( element ) {
-			var $parent = element.parent(),
-				title = $parent.data( "title" ),
-				desc = $parent.data( "desc" ),
-				html = element.html();
-
-				return {
-					title: title,
-					desc: desc,
-					html: html
-				}
-		},
-
-		open: function() {
-			var self = this;
-			self.$triggers.on( "click", function( e ) {
-				e.preventDefault();
-				var $a = $( this ),
-					content = self._getContent( $a ),
-					$li = $a.parents( "li" ),
-					$details = $( ".image-details", $li ),
-					$contentImage = $( ".image", $details ),
-					$detailsTitle = $( ".image-details-title", $details ),
-					$detailsText = $( ".image-details-text", $details );
-
-					$contentImage.html( content.html );
-					$detailsTitle.text( content.title );
-					$detailsText.text( content.desc );
-
-					self.$element.find( ".image-details" ).slideUp( "fast" );
-					$details.slideDown( "fast" );
-
-			});
-		},
-		close: function() {
-			this.$closeLinks.on( "click", function( e ) {
-				e.preventDefault();
-				$( this ).parent().slideUp( "fast" );
-
-			});
-		}
-	};
-
-	$(function() {
-		var preview = new $.imagePreview( "#image-wrapper" );
-
-	});
-
-})( jQuery );
-
-
-
-/* http://codepen.io/SitePoint/pen/EabNrX
-
-// Demo by Dan Rose.
-// See: http://www.sitepoint.com/recreating-google-images-search-layout-css
-
-
-// dynamically create loads of image cells
-function cells(count) {
-  if (typeof count !== 'number' || count > 99) return false;
-
-  var html = '',
-      imageNum;
-
-  for (i = 0; i < count; i++) {
-    imageNum = Math.floor(Math.random() * 9) + 1;
-    html += '<article class="image__cell is-collapsed">' +
-	    '<div class="image--basic">' +
-		    '<a href="#expand-jump-'+i+'">' +
-		        '<img id="expand-jump-'+i+'" class="basic__img" src="http://lorempixel.com/250/250/fashion/'+ imageNum +'" alt="Fashion '+ imageNum +'" />' +
-	      '</a>' +
-	      '<div class="arrow--up"></div>' +
-	    '</div>' +
-	    '<div class="image--expand">' +
-		    '<a href="#close-jump-'+i+'" class="expand__close"></a>' +
-          '<img class="image--large" src="http://lorempixel.com/400/400/fashion/'+ imageNum +'" alt="Fashion '+ imageNum +'" />' +
-	    '</div>' +
-	  '</article>';
-  }
-  return html;
-}
-
-//append cells to grid
-$('.image-grid').empty().html(cells(50));
-
-
-//bind click events
-var $cell = $('.image__cell');
-
-$cell.find('.image--basic').click(function() {
-  var $thisCell = $(this).closest('.image__cell');
-
-  if ($thisCell.hasClass('is-collapsed')) {
-    $cell.not($thisCell).removeClass('is-expanded').addClass('is-collapsed');
-    $thisCell.removeClass('is-collapsed').addClass('is-expanded');
-  } else {
-    $thisCell.removeClass('is-expanded').addClass('is-collapsed');
-  }
-});
-
-$cell.find('.expand__close').click(function(){
-
-  var $thisCell = $(this).closest('.image__cell');
-
-  $thisCell.removeClass('is-expanded').addClass('is-collapsed');
-});
-*/
-
-
-=======
->>>>>>> thumbnailGrid
 /*
 * debouncedresize: special jQuery event that happens once after a window resize
 *
@@ -136,11 +6,7 @@ $cell.find('.expand__close').click(function(){
 *
 * Copyright 2011 @louis_remi
 * Licensed under the MIT license.
-<<<<<<< HEAD
-
-=======
 */
->>>>>>> thumbnailGrid
 var $event = $.event,
 $special,
 resizeTimeout;
@@ -322,19 +188,11 @@ var Grid = (function() {
 			'transition' : 'transitionend'
 		},
 		transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
-<<<<<<< HEAD
-		// support for css transitions
-		support = Modernizr.csstransitions,
-		// default settings
-		settings = {
-			minHeight : 500,
-=======
 		// support for csstransitions
 		support = Modernizr.csstransitions,
 		// default settings
 		settings = {
 			minHeight : 800,
->>>>>>> thumbnailGrid
 			speed : 350,
 			easing : 'ease',
 			showVisitButton : true
@@ -351,11 +209,7 @@ var Grid = (function() {
 			saveItemInfo( true );
 			// get window´s size
 			getWinSize();
-<<<<<<< HEAD
-			// initialize events
-=======
 			// initialize some events
->>>>>>> thumbnailGrid
 			initEvents();
 
 		} );
@@ -363,11 +217,7 @@ var Grid = (function() {
 	}
 
 	// add more items to the grid.
-<<<<<<< HEAD
-	// the new items need to be appended to the grid.
-=======
 	// the new items need to appended to the grid.
->>>>>>> thumbnailGrid
 	// after that call Grid.addItems(theItems);
 	function addItems( $newitems ) {
 
@@ -494,14 +344,9 @@ var Grid = (function() {
 		create : function() {
 			// create Preview structure:
 			this.$title = $( '<h3></h3>' );
-<<<<<<< HEAD
-			this.$description = $( '<p></p>' );
-			var detailAppends = [this.$title, this.$description];
-=======
 			this.$summary = $( '<p></p>' );
 			this.$description = $( '<p></p>' );
 			var detailAppends = [ this.$title, this.$summary, this.$description ];
->>>>>>> thumbnailGrid
 			if (settings.showVisitButton === true) {
 				this.$href = $( '<a href="#">Visit website</a>' );
 				detailAppends.push(this.$href);
@@ -543,18 +388,12 @@ var Grid = (function() {
 					href : $itemEl.attr( 'href' ),
 					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
-<<<<<<< HEAD
-=======
 					summary : $itemEl.data( 'summary' ),
->>>>>>> thumbnailGrid
 					description : $itemEl.data( 'description' )
 				};
 
 			this.$title.html( eldata.title );
-<<<<<<< HEAD
-=======
 			this.$summary.html( eldata.summary );
->>>>>>> thumbnailGrid
 			this.$description.html( eldata.description );
 			if (settings.showVisitButton === true) {
 				this.$href.attr( 'href', eldata.href );
@@ -684,7 +523,3 @@ var Grid = (function() {
 	};
 
 })();
-<<<<<<< HEAD
-*/
-=======
->>>>>>> thumbnailGrid
