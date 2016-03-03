@@ -10,9 +10,9 @@
 
 .og-grid {
   padding: 20px 0;
-  display: flex; 
+  display: flex;
   flex-wrap: wrap;
-  text-align: center; 
+  text-align: center;
   justify-content: center;
 }
 
@@ -24,6 +24,7 @@
 }
 
 .og-grid li > a,
+.og-grid li > h3,
 .og-grid li > a img {
 	border: none;
 	outline: none;
