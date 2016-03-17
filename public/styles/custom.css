@@ -137,6 +137,10 @@ padding-top: 1%;
 	border: 1px solid;
 }
 
+.expanded {
+	display: none;
+}
+
 .superbox-list {
 	display:inline-block;
 	*display:inline;

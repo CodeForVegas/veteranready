@@ -11,7 +11,7 @@
     {{#each data.agency}}
     <div class="contracted">
         <h3 style="margin-top:1vw; margin-bottom: 1vw;">{{name}}</h3>
-        <img src="{{cloudinaryUrl logo width='210' height='200' crop='fit'}}" alt="{{contactName}}" style="margin: auto;" />
+        <img src="{{cloudinaryUrl logo width='210' height='200' crop='fit'}}" alt="{{contactName}}" style="margin-bottom:1vw;" />
     </div>
     <div class="expanded">
 
@@ -93,6 +93,8 @@
 <script src="/js/jquery/jquery-1.11.3.min.js"></script>
 <script>
 $(document).ready(function() {
-
+  $(".contracted").click(function(){
+    $(".expanded").toggle();
+  });
 });
 </script>
