@@ -133,6 +133,10 @@ padding-top: 1%;
 
 /* SuperBox */
 
+.contracted {
+	border: 1px solid;
+}
+
 .superbox-list {
 	display:inline-block;
 	*display:inline;

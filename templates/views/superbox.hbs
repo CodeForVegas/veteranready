@@ -9,6 +9,12 @@
 <div class="container">
   <div class="container text-center">
     {{#each data.agency}}
+    <div class="contracted">
+        <h3 style="margin-top:1vw; margin-bottom: 1vw;">{{name}}</h3>
+        <img src="{{cloudinaryUrl logo width='210' height='200' crop='fit'}}" alt="{{contactName}}" style="margin: auto;" />
+    </div>
+    <div class="expanded">
+
     <h2>{{name}}</h2>
     <h3><a target="_blank" href="{{website}}">{{website}}</a></h3>
 	<div class="container" style="margin-top:5%;">
@@ -79,8 +85,14 @@
           </div>
 		</div>
 	  </div>
+     </div> <!-- /expanded -->
     {{/each}}
   </div>
 {{>pagination}}
 </div>
 <script src="/js/jquery/jquery-1.11.3.min.js"></script>
+<script>
+$(document).ready(function() {
+
+});
+</script>
