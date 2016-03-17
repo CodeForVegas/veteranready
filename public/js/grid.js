@@ -344,11 +344,13 @@ var Grid = (function() {
 		create : function() {
 			// create Preview structure:
 			this.$title = $( '<h3></h3>' );
+			this.$address = $( '<h4></h4>');
+			this.$phone = $( '<h4></h4>');
 			this.$summary = $( '<p></p>' );
 			this.$description = $( '<p></p>' );
 			this.$contactname = $( '<h3></h3>' );
 			this.$video = $( '<iframe src="{{video}}" allowfullscreen height="300" width="400"></iframe>')
-			var detailAppends = [ this.$title, this.$summary, this.$description ];
+			var detailAppends = [ this.$title, this.$address, this.$phone, this.$summary, this.$description ];
 			if (settings.showVisitButton === true) {
 				this.$href = $( '<a href="#">Visit website</a>' );
 				detailAppends.push(this.$href);
@@ -390,6 +392,8 @@ var Grid = (function() {
 					href : $itemEl.attr( 'href' ),
 					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
+					address: $itemEl.data( 'address' ),
+					phone: $itemEl.data( 'phone' ),
 					summary : $itemEl.data( 'summary' ),
 					description : $itemEl.data( 'description' ),
 					video : $itemEl.data( 'video' ),
@@ -397,6 +401,8 @@ var Grid = (function() {
 				};
 
 			this.$title.html( eldata.title );
+			this.$address.html( eldata.address );
+			this.$phone.html( eldata.phone );
 			this.$summary.html( eldata.summary );
 			this.$description.html( eldata.description );
 			this.$video.attr( 'src', eldata.video );
