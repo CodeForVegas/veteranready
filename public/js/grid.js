@@ -346,6 +346,7 @@ var Grid = (function() {
 			this.$title = $( '<h3></h3>' );
 			this.$summary = $( '<p></p>' );
 			this.$description = $( '<p></p>' );
+			this.$contactname = $( '<h3></h3>' );
 			this.$video = $( '<iframe src="{{video}}" allowfullscreen height="300" width="400"></iframe>')
 			var detailAppends = [ this.$title, this.$summary, this.$description ];
 			if (settings.showVisitButton === true) {
@@ -354,7 +355,7 @@ var Grid = (function() {
 			}
 			this.$details = $( '<div class="og-details"></div>' ).append(detailAppends);
 			this.$loading = $( '<div class="og-loading"></div>' );
-			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$video, this.$loading );
+			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$video, this.$loading, this.$contactname );
 			this.$closePreview = $( '<span class="og-close"></span>' );
 			this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
 			this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
@@ -391,13 +392,15 @@ var Grid = (function() {
 					title : $itemEl.data( 'title' ),
 					summary : $itemEl.data( 'summary' ),
 					description : $itemEl.data( 'description' ),
-					video : $itemEl.data( 'video' )
+					video : $itemEl.data( 'video' ),
+					contactname : $itemEl.data( 'contactname' )
 				};
 
 			this.$title.html( eldata.title );
 			this.$summary.html( eldata.summary );
 			this.$description.html( eldata.description );
 			this.$video.attr( 'src', eldata.video );
+			this.$contactname.html( eldata.contactname );
 			if (settings.showVisitButton === true) {
 				this.$href.attr( 'href', eldata.href );
 			}
