@@ -347,14 +347,14 @@ var Grid = (function() {
 			this.$summary = $( '<p></p>' );
 			this.$description = $( '<p></p>' );
 			this.$video = $( '<iframe src="{{video}}" allowfullscreen height="300" width="400"></iframe>')
-			var detailAppends = [ this.$title, this.$summary, this.$description, this.$video ];
+			var detailAppends = [ this.$title, this.$summary, this.$description ];
 			if (settings.showVisitButton === true) {
 				this.$href = $( '<a href="#">Visit website</a>' );
 				detailAppends.push(this.$href);
 			}
 			this.$details = $( '<div class="og-details"></div>' ).append(detailAppends);
 			this.$loading = $( '<div class="og-loading"></div>' );
-			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$loading );
+			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$video, this.$loading );
 			this.$closePreview = $( '<span class="og-close"></span>' );
 			this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
 			this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
