@@ -192,7 +192,7 @@ var Grid = (function() {
 		support = Modernizr.csstransitions,
 		// default settings
 		settings = {
-			minHeight : 800,
+			minHeight : 1600,
 			speed : 350,
 			easing : 'ease',
 			showVisitButton : true
@@ -346,7 +346,7 @@ var Grid = (function() {
 			this.$title = $( '<h3></h3>' );
 			this.$summary = $( '<p></p>' );
 			this.$description = $( '<p></p>' );
-			this.$video = $( '<iframe src="{{video}}" allowfullscreen></iframe>')
+			this.$video = $( '<iframe src="{{video}}" allowfullscreen height="300" width="400"></iframe>')
 			var detailAppends = [ this.$title, this.$summary, this.$description, this.$video ];
 			if (settings.showVisitButton === true) {
 				this.$href = $( '<a href="#">Visit website</a>' );
