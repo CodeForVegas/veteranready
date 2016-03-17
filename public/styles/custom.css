@@ -135,6 +135,9 @@ padding-top: 1%;
 
 .contracted {
 	border: 1px solid;
+	display: inline-block;
+	width: 20%;
+	height: 25vw;
 }
 
 .expanded {
