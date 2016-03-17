@@ -346,7 +346,8 @@ var Grid = (function() {
 			this.$title = $( '<h3></h3>' );
 			this.$summary = $( '<p></p>' );
 			this.$description = $( '<p></p>' );
-			var detailAppends = [ this.$title, this.$summary, this.$description ];
+			this.$video = $( '<iframe src="{{video}}" allowfullscreen></iframe>')
+			var detailAppends = [ this.$title, this.$summary, this.$description, this.$video ];
 			if (settings.showVisitButton === true) {
 				this.$href = $( '<a href="#">Visit website</a>' );
 				detailAppends.push(this.$href);
@@ -389,12 +390,14 @@ var Grid = (function() {
 					largesrc : $itemEl.data( 'largesrc' ),
 					title : $itemEl.data( 'title' ),
 					summary : $itemEl.data( 'summary' ),
-					description : $itemEl.data( 'description' )
+					description : $itemEl.data( 'description' ),
+					video : $itemEl.data( 'video' )
 				};
 
 			this.$title.html( eldata.title );
 			this.$summary.html( eldata.summary );
 			this.$description.html( eldata.description );
+			this.$video.attr( 'src', eldata.video );
 			if (settings.showVisitButton === true) {
 				this.$href.attr( 'href', eldata.href );
 			}
