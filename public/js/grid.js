@@ -343,6 +343,7 @@ var Grid = (function() {
 	Preview.prototype = {
 		create : function() {
 			// create Preview structure:
+			this.$topic = $( '<h4></h4>' );
 			this.$title = $( '<h3></h3>' );
 			this.$address = $( '<h4></h4>');
 			this.$phone = $( '<h4></h4>');
@@ -351,7 +352,7 @@ var Grid = (function() {
 			this.$contactname = $( '<h3></h3>' );
 			this.$contacttitle = $( '<h4></h4>' );
 			this.$video = $( '<iframe src="{{video}}" allowfullscreen height="300" width=100%></iframe>')
-			var detailAppends = [ this.$title, this.$address, this.$phone, this.$summary, this.$description ];
+			var detailAppends = [ this.$topic, this.$title, this.$address, this.$phone, this.$summary, this.$description ];
 			if (settings.showVisitButton === true) {
 				this.$href = $( '<a href="#">Visit website</a>' );
 				detailAppends.push(this.$href);
@@ -392,6 +393,7 @@ var Grid = (function() {
 				eldata = {
 					href : $itemEl.attr( 'href' ),
 					largesrc : $itemEl.data( 'largesrc' ),
+					topic: $itemEl.data( 'topic' ),
 					title : $itemEl.data( 'title' ),
 					address: $itemEl.data( 'address' ),
 					phone: $itemEl.data( 'phone' ),
@@ -402,6 +404,7 @@ var Grid = (function() {
 					contacttitle : $itemEl.data( 'contacttitle' )
 				};
 
+			this.$topic.html( eldata.topic );
 			this.$title.html( eldata.title );
 			this.$address.html( eldata.address );
 			this.$phone.html( eldata.phone );
