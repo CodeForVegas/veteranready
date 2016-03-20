@@ -349,7 +349,8 @@ var Grid = (function() {
 			this.$summary = $( '<p></p>' );
 			this.$description = $( '<p></p>' );
 			this.$contactname = $( '<h3></h3>' );
-			this.$video = $( '<iframe src="{{video}}" allowfullscreen height="300" width="400"></iframe>')
+			this.$contacttitle = $( '<h4></h4>' );
+			this.$video = $( '<iframe src="{{video}}" allowfullscreen height="300" width=100%></iframe>')
 			var detailAppends = [ this.$title, this.$address, this.$phone, this.$summary, this.$description ];
 			if (settings.showVisitButton === true) {
 				this.$href = $( '<a href="#">Visit website</a>' );
@@ -357,7 +358,7 @@ var Grid = (function() {
 			}
 			this.$details = $( '<div class="og-details"></div>' ).append(detailAppends);
 			this.$loading = $( '<div class="og-loading"></div>' );
-			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$video, this.$loading, this.$contactname );
+			this.$fullimage = $( '<div class="og-fullimg"></div>' ).append( this.$video, this.$loading, this.$contactname, this.$contacttitle );
 			this.$closePreview = $( '<span class="og-close"></span>' );
 			this.$previewInner = $( '<div class="og-expander-inner"></div>' ).append( this.$closePreview, this.$fullimage, this.$details );
 			this.$previewEl = $( '<div class="og-expander"></div>' ).append( this.$previewInner );
@@ -397,7 +398,8 @@ var Grid = (function() {
 					summary : $itemEl.data( 'summary' ),
 					description : $itemEl.data( 'description' ),
 					video : $itemEl.data( 'video' ),
-					contactname : $itemEl.data( 'contactname' )
+					contactname : $itemEl.data( 'contactname' ),
+					contacttitle : $itemEl.data( 'contacttitle' )
 				};
 
 			this.$title.html( eldata.title );
@@ -407,6 +409,7 @@ var Grid = (function() {
 			this.$description.html( eldata.description );
 			this.$video.attr( 'src', eldata.video );
 			this.$contactname.html( eldata.contactname );
+			this.$contacttitle.html( eldata.contacttitle );
 			if (settings.showVisitButton === true) {
 				this.$href.attr( 'href', eldata.href );
 			}
