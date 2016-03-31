@@ -349,8 +349,6 @@ var Grid = (function() {
 			this.$phone = $( '<h4></h4>');
 			this.$summary = $( '<p></p>' );
 			this.$description = $( '<p></p>' );
-			this.$facebook = $( '<a href="#">Facebook</a>' );
-			this.$linkedin = $( '<a href="#">LinkedIn</a>' );
 			this.$contactname = $( '<h3></h3>' );
 			this.$contacttitle = $( '<h4></h4>' );
 			this.$video = $( '<iframe src="{{video}}" allowfullscreen height="300" width=100%></iframe>')
@@ -358,8 +356,6 @@ var Grid = (function() {
 			if (settings.showVisitButton === true) {
 				this.$href = $( '<a href="#" target="_blank">Visit website</a>' );
 				detailAppends.push(this.$href);
-				detailAppends.push(this.$facebook);
-				detailAppends.push(this.$linkedin);
 			}
 			this.$details = $( '<div class="og-details"></div>' ).append(detailAppends);
 			this.$loading = $( '<div class="og-loading"></div>' );
@@ -403,8 +399,6 @@ var Grid = (function() {
 					phone: $itemEl.data( 'phone' ),
 					summary : $itemEl.data( 'summary' ),
 					description : $itemEl.data( 'description' ),
-					facebook : $itemEl.data( 'facebook' ),
-					linkedin : $itemEl.data( 'linkedin' ),
 					video : $itemEl.data( 'video' ),
 					contactname : $itemEl.data( 'contactname' ),
 					contacttitle : $itemEl.data( 'contacttitle' )
@@ -416,8 +410,6 @@ var Grid = (function() {
 			this.$phone.html( eldata.phone );
 			this.$summary.html( eldata.summary );
 			this.$description.html( eldata.description );
-			this.$facebook.attr( 'href', eldata.facebook );
-			this.$linkedin.attr( 'href', eldata.linkedin );
 			this.$video.attr( 'src', eldata.video );
 			this.$contactname.html( eldata.contactname );
 			this.$contacttitle.html( eldata.contacttitle );
