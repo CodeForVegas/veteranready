@@ -1,54 +1,32 @@
-{{!< default}}
 <div class="container">
-  <div class="jumbotron">
-    <div class="container text-center" style="margin-top:-35px; margin-bottom:-30px">
-	  <h2 class="text-center">Showing {{data.agency.length}} Community Partners</h2>
-    </div>
-  </div>
+	<h1>Blog</h1>
 </div>
 <div class="container">
-	<div class="main">
-		<ul id="og-grid" class="og-grid">
-			{{#each data.agency}}
-			<li>
-                <h3 style="margin-top:2vw; margin-bottom: 2vw; width:210px;">{{name}}</h3>
-				<a href="{{website}}" data-largesrc="{{cloudinaryUrl contactPhoto width='400'}}" data-title="{{name}}"
-                data-topic="We Specialize In {{topic}}" data-summary="{{summary}}" data-description="{{description}}"
-                data-facebook="{{facebook}}" data-linkedin="{{linkedin}}" data-video="{{video}}" data-contactname="{{contactName}}" data-contacttitle="{{contactTitle}}" data-address="{{address.name}} {{address.number}} {{address.street1}} {{address.street2}} {{address.suburb}} {{address.state}} {{address.postcode}}" data-phone="{{phone}}" style="margin-top: 15px;">
-					<img src="{{cloudinaryUrl logo width='210' height='200' crop='fit'}}" alt="{{contactName}}" style="margin: auto;" />
-				</a>
-			</li>
-			{{/each}}
-<!--		<li>
-				<a href="http://cargocollective.com/jaimemartinez/" data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
-					<img src="images/thumbs/1.jpg" alt="img01"/>
-				</a>
-			</li>
--->
-		</ul>
-	</div><!-- /main -->
-</div><!-- /container -->
-<script src="/js/jquery/jquery-1.11.3.min.js"></script>
-
-<!-- Original code below
-
-<div class="container">
-  <div class="jumbotron">
-    <div class="container text-center" style="margin-top:-35px; margin-bottom:-30px">
-	  <h2 class="text-center">Showing {{data.agency.length}} Community Partners</h2>
-    </div>
-  </div>
-</div>
-<div class="superbox text-center">
-	{{#each data.agency}}
-		<div class="superbox-list">
-            <h3 style="margin-bottom:1vw;">{{name}}</h3>
-            <div class="thumbnail" style="height:320px; width=200px;">
-			    <img src="{{cloudinaryUrl logo width='160'}}" data-img="{{cloudinaryUrl contactPhoto width='400'}}" alt={{name}}"" class="superbox-img">
-            </div>
+	<div class="row">
+		<div class="col-sm-8 col-md-9">
+			<h4 class="text-weight-normal">Showing {{ data.posts.results.length}} post.</h4>
+			<div class="blog">
+				{{# each data.posts.results}}
+				<div data-ks-editable="{{#if ../user}}{{adminEditableUrl ../../user _id}}{{/if}}" class="post">
+					<h2><a href="{{postUrl slug}}">{{{title}}}</a></h2>
+					<p class="lead text-muted">{{{categoryList categories prefix="Posted in "}}}
+							{{#if author.name.first}}by {{author.name.first}}{{/if}}
+					</p>
+					<p>{{{content.extended}}}</p>
+					<p class="read-more"><a href="{{postUrl slug}}">Read more...</a></p>
+				</div>
+				{{/each}}
+			</div>
 		</div>
-	{{/each}}
+		<div class="col-sm-4 col-md-3">
+			<h2>Categories</h2>
+			<div style="margin-top: 70px;" class="list-group">
+				<a href="/blog" class="active list-group-item">All Categories</a>
+				{{# each data.categories }}
+				<a href="{{categoryUrl key}}" class="false list-group-item">{{name}}</a>
+				{{/each}}
+			</div>
+		</div>
+	</div>
+	{{>pagination}}
 </div>
-<<<<<<< HEAD
-<div style="height:50px;"></div>
--->
