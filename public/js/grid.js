@@ -356,7 +356,7 @@ var Grid = (function() {
 			this.$video = $( '<iframe src="{{video}}" allowfullscreen height="300" width=100%></iframe>')
 			var detailAppends = [ this.$topic, this.$title, this.$address, this.$phone, this.$summary, this.$description ];
 			if (settings.showVisitButton === true) {
-				this.$href = $( '<a href="#">Visit website</a>' );
+				this.$href = $( '<a href="#" target="_blank">Visit website</a>' );
 				detailAppends.push(this.$href);
 				detailAppends.push(this.$facebook);
 				detailAppends.push(this.$linkedin);
