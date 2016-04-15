@@ -44,19 +44,6 @@
 							{{/each}}
 						</select>
 					</div>
-				    <!--
-					<div class="form-group {{#if validationErrors.subject}}has-error{{/if}}">
-						<label><h4>Subject</h4></label>
-						<select name="subject" class="form-control">
-							<option value="">(select one)</option>
-							<option value="Services">Our Services</option>
-							<option value="Events">Post an Event</option>
-							<option value="Resources">Share a Resource</option>
-							<option value="Mentorship">Mentorship or Apprenticeship Opportunities</option>
-							<option value="Other">Something Else</option>
-						</select>
-					</div>
-					-->
 					<div class="form-group {{#if validationErrors.message}}has-error{{/if}} ">
 						<label><h4>Message</h4></label>
 						<textarea name="message" placeholder="Leave us a message..." rows="4" class="form-control">{{formData.message}}</textarea>
