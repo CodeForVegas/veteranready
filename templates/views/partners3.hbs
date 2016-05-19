@@ -1,4 +1,14 @@
 {{!< default}}
+<style>
+    .thumbnail {
+        width: 300px;
+        height: 400px;
+        overflow: auto;
+    }
+    .thumbnail img {
+        margin-top: 1em;
+    }
+</style>
 <div class="container">
   <div class="jumbotron">
     <div class="container text-center" style="margin-top:-35px; margin-bottom:-30px">
@@ -8,11 +18,22 @@
 </div>
 <div class="container">
 	<div class="main">
-		<ul id="og-grid" class="og-grid">
-			{{#each data.agency}}
-
-			{{/each}}
-		</ul>
+        <div class="row">
+            {{#each data.agency}}
+            <div class="col-sm-6 col-md-4">
+                <div class="thumbnail">
+                    {{#if contactPhoto}}
+                    <img src="{{cloudinaryUrl contactPhoto width='150' height='150' crop='fit'}}" alt="{{contactName}}">
+                    {{/if}}
+                    <div class="caption">
+                        <h3>{{name}}</h3>
+                        <p>...</p>
+                        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
 	</div><!-- /main -->
 </div><!-- /container -->
 <script src="/js/jquery/jquery-1.11.3.min.js"></script>
