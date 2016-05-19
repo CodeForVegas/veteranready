@@ -33,6 +33,7 @@ exports.initLocals = function(req, res, next) {
 		{ label: 'Vet-Owned',         key: 'vobs',        href: '/vobs'},
 		{ label: 'Partners',		      key: 'agency',		  href: '/agency' },
 		{ label: 'Partners2',         key: 'partners2',   href: '/partners2' },
+		{ label: 'Partners3',         key: 'partners3',   href: '/partners3' },
 		{ label: 'Contact',		        key: 'contact',		  href: '/contact' }
 /*  { label: 'Blog',		          key: 'blog',		    href: '/blog' },
 		{ label: 'Superbox',          key: 'superbox',    href: '/superbox'}
