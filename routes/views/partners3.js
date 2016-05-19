@@ -6,7 +6,7 @@ exports = module.exports = function(req, res) {
 	var locals = res.locals;
 
 	// Set locals
-	locals.section = 'partners2';
+	locals.section = 'partners3';
 	locals.filters = {
 		agency: req.params.agency
 	};
@@ -29,6 +29,6 @@ exports = module.exports = function(req, res) {
 	});
 
 	// Render the view
-	view.render('partners2');
+	view.render('partners3');
 
 };
