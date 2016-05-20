@@ -1,0 +1,49 @@
+.imagelistexpander(@prefix: "imagelistexpander-" ) {
+    @ePrefix: e(@prefix);
+
+    .@{ePrefix} {
+        &items {
+            font-size:0;
+        }
+        &item {
+            display: inline-block;
+            vertical-align: top;
+            -webkit-transition: height 500ms ease;
+            -o-transition: height 500ms ease;
+            transition: height 500ms ease;
+        }
+        &expander {
+            position: absolute;
+            left: 0;
+            right: 0;
+            overflow: hidden;
+            max-height: 0;
+            -webkit-transition: max-height 500ms ease;
+            -o-transition: max-height 500ms ease;
+            transition: max-height 500ms ease;
+        }
+        &contents {
+            position:relative;
+        }
+        &contents:after {
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            margin-left: -30px;
+            width:0;
+            height:0;
+            content: '';
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom-style: solid;
+            border-bottom-width: 0px;
+            -webkit-transition: border-bottom-width 500ms ease;
+            -o-transition: border-bottom-width 500ms ease;
+            transition: border-bottom-width 500ms ease;
+        }
+        &item.active .@{ePrefix}contents:after {
+            border-bottom-width: 30px;
+        }
+    }
+}

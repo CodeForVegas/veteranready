@@ -1,0 +1,124 @@
+@import "mixin.less";
+
+.imagelistexpander("example-");
+
+.less-than(@x, @callback) {
+    @media (max-width: @x) {
+        @callback();
+    }
+}
+
+.between-and(@x, @y, @callback) {
+    @media (min-width: @x) and (max-width: @y) {
+        @callback();
+    }
+}
+
+.greater-than(@x, @callback) {
+    @media (min-width: @x) {
+        @callback();
+    }
+}
+
+body {
+    font-family: 'Nanum Barun Gothic';
+    font-weight: 200;
+    color: #555;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+.example-item {
+    text-align: left;
+    font-size: 25px;
+    margin:0 10px;
+    padding:10px 0;
+    .thumbnail {
+        position:relative;
+        width:300px;
+        height:300px;
+        overflow:hidden;
+        cursor: pointer;
+    }
+    .thumbnail > img {
+        position: absolute;
+        top: 50%;
+        margin-top: -300px;
+        max-width: 300px;
+    }
+    .title {
+        text-align: center;
+        margin-top:20px;
+        padding-bottom: 20px;
+    }
+}
+.example-contents:after {
+    border-bottom-color: #F6F3ED;
+}
+.example-expander {
+    background: #F6F3ED;
+}
+.example-expander-contents {
+    margin:0 auto;
+    width: 1000px;
+
+    .between-and(640px, 999px, {
+        width: 640px;
+    });
+    .less-than(639px, {
+        width: 100%;
+    });
+
+    padding: 20px 0;
+    &:after {
+        clear:both;
+        display:table;
+        content:'';
+    }
+    > div.col {
+        float:left;
+        width: 480px;
+        .between-and(640px, 999px, {
+            width: 310px;
+        });
+        .less-than(639px, {
+            float: none;
+            padding: 25px 20px 0;
+            width: auto;
+        });
+    }
+    > div.col + div.col {
+        margin-left: 40px;
+        .between-and(640px, 999px, {
+            margin-left: 20px;
+        });
+        .less-than(639px, {
+            margin-left: 0px;
+        });
+    }
+    div.close {
+        position: absolute;
+        top:10px;
+        right:20px;
+    }
+    div.title {
+        font-weight: 500;
+        color: #D28A3C;
+    }
+    div.contents {
+        margin-top: 10px;
+        border-top: 1px solid #BCB098;
+        border-bottom: 1px solid #BCB098;
+        padding: 10px 0;
+        font-size: 14px;
+        line-height: 24px;
+        color: #797262;
+    }
+    div.image > img {
+        width: 100%;
+        display:block;
+    }
+}

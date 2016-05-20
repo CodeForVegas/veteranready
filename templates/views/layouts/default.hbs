@@ -9,6 +9,9 @@
 		<link href="/styles/site.min.css" rel="stylesheet">
 		<link href="/styles/custom.css" rel="stylesheet">
 		<link href="/styles/component.css" rel="stylesheet">
+		<link href="Thumbnail-Grid-with-Expanding-Image-Preview-Using-jQuery/css/example.css" rel="stylesheet">
+		<link href="Thumbnail-Grid-with-Expanding-Image-Preview-Using-jQuery/css/imagelistexpander.css" rel="stylesheet">
+		<link href="Thumbnail-Grid-with-Expanding-Image-Preview-Using-jQuery/css/imagelistexpander.min.css" rel="stylesheet">
 		<script src="/js/modernizr.custom.js"></script>
 
 		{{!-- This file provides the default styling for the KeystoneJS Content Editor
@@ -128,6 +131,14 @@
 			// Call SuperBox
 			$('.superbox').SuperBox();
 		});
+		</script>
+		<script src="Thumbnail-Grid-with-Expanding-Image-Preview-Using-jQuery/js/jquery.imagelistexpander.js"></script>
+		<script>
+		(function(global, $){
+		    $('.gallery-items').imagelistexpander({
+		        prefix: "gallery-"
+		    });
+		})(this, jQuery)
 		</script>
 		{{!--
 			//- Customise which Bootstrap javascript files are served by including

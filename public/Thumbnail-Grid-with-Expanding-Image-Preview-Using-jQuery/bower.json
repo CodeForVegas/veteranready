@@ -1,0 +1,37 @@
+{
+  "name": "jquery.imagelistexpander",
+  "version": "1.0.0",
+  "authors": [
+    "Changwan Jun <me@wani.kr>"
+  ],
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "keywords": [
+    "imagelistexpander",
+    "jquery",
+    "javascript",
+    "image",
+    "list",
+    "expand",
+    "expander"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">=1.10.0"
+  },
+  "devDependencies": {
+    "normalize.css": "~3.0.2",
+    "html5shiv": "~3.7.2",
+    "respond": "~1.4.2",
+    "nanum-barun-gothic": "~1.0.0"
+  }
+}
