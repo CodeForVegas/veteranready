@@ -244,22 +244,25 @@
               </li>
             </ul>
             {{#each data.agency}}
-            <ul class="imagelistexpander-list">
-                <li class="imagelistexpander-list-item">
-                    <div class="imagelistexpander-contents">
-                        <div class="imagelistexpander-trigger">toggle</div>
+            <ul class="gallery-items">
+                <li class="gallery-item">
+                    <div class="gallery-contents">
+                        <div class="thumbnail gallery-trigger">
                             <h4 class="text-center">{{topic}}</h4>
-                            {{#if contactPhoto}}
-                            <img src="{{cloudinaryUrl contactPhoto width='175' height='175' crop='fit'}}" alt="{{contactName}}">
-                            {{/if}}
                             <div class="caption">
                                 <h3 class="text-center">{{name}}</h3>
+                                {{#if contactPhoto}}
+                                <img src="{{cloudinaryUrl contactPhoto width='125' height='125' crop='fit'}}" alt="{{contactName}}">
+                                {{/if}}
                             </div>
+                        </div>
                     </div>
-                    <div class="imagelistexpander-expander">
-                        <div class="imagelistexpander-expander-contents">
-                            <div class="imagelistexpander-trigger-close">close</div>
+                    <div class="gallery-expander">
+                        <div class="gallery-expander-contents">
+                            <div class="gallery-trigger-close close">close</div>
+                            <div class="col">
                             <h4 class="text-center">{{topic}}</h4>
+                            </div>
                         </div>
                     </div>
                 </li>
