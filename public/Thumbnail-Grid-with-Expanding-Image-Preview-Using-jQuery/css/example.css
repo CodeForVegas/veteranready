@@ -15,6 +15,7 @@
   right: 0;
   overflow: hidden;
   max-height: 0;
+  z-index: 1;
   -webkit-transition: max-height 500ms ease;
   -o-transition: max-height 500ms ease;
   transition: max-height 500ms ease;
