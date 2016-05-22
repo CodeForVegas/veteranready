@@ -257,8 +257,9 @@
                             <h4 class="text-center">{{topic}}</h4>
                             <div class="caption">
                                 {{#if contactPhoto}}
-                                <img src="{{cloudinaryUrl contactPhoto width='125' height='125' crop='fit'}}" alt="{{contactName}}">
+                                <img src="{{cloudinaryUrl contactPhoto width='125' height='125' crop='fit'}}" alt="{{contactName}}" />
                                 {{/if}}
+                                <h3 style="float:right; max-width:125px;">{{contactName}}</h3>
                                 <div class="title text-center">{{name}}</div>
                             </div>
                         </div>
