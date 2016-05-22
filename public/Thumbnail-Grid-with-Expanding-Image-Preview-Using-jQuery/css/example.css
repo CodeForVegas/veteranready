@@ -165,3 +165,8 @@ ul {
   width: 300px;
   color: #003057;
 }
+
+.contact-name {
+  float: right;
+  max-width: 125px;
+}
