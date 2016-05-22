@@ -65,8 +65,8 @@ ul {
 
 .gallery-item .thumbnail {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 320px;
+  height: 400px;
   overflow: hidden;
   cursor: pointer;
 }
@@ -159,4 +159,9 @@ ul {
 .gallery-expander-contents div.image > img {
   width: 100%;
   display: block;
+}
+
+.title {
+  width: 300px;
+  color: #003057;
 }
