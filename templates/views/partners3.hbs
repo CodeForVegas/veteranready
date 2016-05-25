@@ -269,15 +269,22 @@
                     <div class="gallery-expander">
                         <div class="gallery-expander-contents">
                             <div class="gallery-trigger-close close">close</div>
-                            <div class="col">
-                              <h2>{{name}}</h2>
-                              <h3><a target="_blank" href="{{website}}">{{website}}</a></h3>
-                              <div class="col-md-6" style="padding:5%">
+                            <h2 class="text-center">{{name}}</h2>
+                            <h3 class="text-center"><a target="_blank" href="{{website}}">{{website}}</a></h3>
+                            <div class="row">
+                              <div class="col-md-6" style="padding:3%;">
+                                {{#if video}}
+                                <div class="responsiveIframe">
+                                  <iframe src="{{video}}" allowfullscreen></iframe>
+                                </div>
+                                {{/if}}
+                              </div>
+                              <div class="col-md-6" style="padding:3%;">
                                 {{#if logo}}
                                   <img src="{{cloudinaryUrl logo width='400'}}" class="img-responsive" alt="{{name}}">
                                 {{/if}}
                               </div>
-                            </div> <!-- /col -->
+                            </div> <!-- /row -->
                         </div> <!-- /gallery-expander-contents -->
                     </div> <!-- /gallery-expander -->
                 </li>
