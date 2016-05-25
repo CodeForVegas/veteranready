@@ -268,8 +268,13 @@
                         <div class="gallery-expander-contents">
                             <div class="gallery-trigger-close close">close</div>
                             <div class="col">
-                                <h2>{{name}}</h2>
-                                <h3><a target="_blank" href="{{website}}">{{website}}</a></h3>
+                              <h2>{{name}}</h2>
+                              <h3><a target="_blank" href="{{website}}">{{website}}</a></h3>
+                              <div class="col-md-6" style="padding:5%">
+                                {{#if logo}}
+                                  <img src="{{cloudinaryUrl logo width='400'}}" class="img-responsive" alt="{{name}}">
+                                {{/if}}
+                              </div>
                             </div> <!-- /col -->
                         </div> <!-- /gallery-expander-contents -->
                     </div> <!-- /gallery-expander -->
