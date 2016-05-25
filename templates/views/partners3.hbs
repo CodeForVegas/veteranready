@@ -271,6 +271,29 @@
                             <div class="gallery-trigger-close close">close</div>
                             <h2 class="text-center">{{name}}</h2>
                             <h3 class="text-center" style="padding-bottom:2%;"><a target="_blank" href="{{website}}">{{website}}</a></h3>
+                            <ul class="list-inline" style="padding-bottom:3%;">
+                              {{#if facebook}}
+                                <li><a target="_blank" href="{{facebook}}"><img src="Facebook.ico" alt="Facebook icon"></a></li>
+                              {{/if}}
+                              {{#if linkedin}}
+                                <li><a target="_blank" href="{{linkedin}}"><img src="Linkedin.ico" alt="LinkedIn icon"></a></li>
+                              {{/if}}
+                              {{#if twitter}}
+                                <li><a target="_blank" href="{{twitter}}"><img src="Twitter.ico" alt="Twitter icon"></a></li>
+                              {{/if}}
+                              {{#if googlePlus}}
+                                <li><a target="_blank" href="{{googlePlus}}"><img src="GooglePlus.png" alt="Google Plus icon"></a></li>
+                              {{/if}}
+                              {{#if instagram}}
+                                <li><a target="_blank" href="{{instagram}}"><img src="Instagram.png" alt="Instagram icon"></a></li>
+                              {{/if}}
+                              {{#if youtube}}
+                                <li><a target="_blank" href="{{youtube}}"><img src="Youtube.png" alt="YouTube icon"></a></li>
+                              {{/if}}
+                              {{#if wordpress}}
+                                <li><a target="_blank" href="{{wordpress}}"><img src="Wordpress.png" alt="WordPress icon"></a></li>
+                              {{/if}}
+                            </ul>
                             <p>{{summary}}</p>
                             <p>{{description}}</p>
                             <div class="row">
