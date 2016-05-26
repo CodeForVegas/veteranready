@@ -102,8 +102,6 @@ ul {
 
 .gallery-expander-contents:after {
   clear: both;
-  display: table;
-  content: '';
 }
 
 .gallery-expander-contents > div.col {
@@ -141,7 +139,6 @@ ul {
 
 .gallery-expander-contents div.title {
   font-weight: 500;
-  /* color: #D28A3C; */
 }
 
 .gallery-expander-contents div.contents {
@@ -149,9 +146,7 @@ ul {
   border-top: 1px solid #666633;
   border-bottom: 1px solid #666633;
   padding: 10px 0;
-  font-size: 14px;
   line-height: 24px;
-  /* color: #797262; */
 }
 
 .gallery-expander-contents div.image > img {
@@ -168,8 +163,4 @@ ul {
   float: right;
   max-width: 125px;
   margin-top: 10%;
-}
-
-.contents p{
-  font-size: 25px;
 }
