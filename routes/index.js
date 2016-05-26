@@ -43,8 +43,6 @@ exports = module.exports = function(app) {
 	app.get('/mentorship', routes.views.mentorship);
 	app.all('/contact', routes.views.contact);
 	app.get('/vobs', routes.views.vobs);
-	app.get('/partners2', routes.views.partners2);
-	app.get('/partners3', routes.views.partners3);
 //app.get('/blog', routes.views.blog);
 //app.get('/blog/:category?', routes.views.blog);
 //app.get('/blog/post/:post', routes.views.post);
