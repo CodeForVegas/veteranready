@@ -171,3 +171,7 @@ ul {
   max-width: 125px;
   margin-top: 10%;
 }
+
+.contents p{
+  font-size: 25px;
+}
