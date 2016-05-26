@@ -167,13 +167,13 @@ ul {
   margin-top: 10%;
 }
 
-.thumbnail {
-  width: 100%;
+.gallery-contents > .thumbnail {
+  /* width: 100%; */
   height: 450px;
   overflow: auto;
 }
 
-.thumbnail img {
+.gallery-contents > .thumbnail img {
   margin-top: 1em;
 }
 
