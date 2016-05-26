@@ -1,5 +1,7 @@
 
-.gallery-items { font-size: 0; }
+.gallery-items {
+  font-size: 0;
+}
 
 .gallery-item {
   display: inline-block;
@@ -190,4 +192,8 @@ ul {
   margin-left: -60px;
   width: 120px;
   margin-bottom: 1em;
+}
+
+.gallery-expander p {
+  font-size: 21px;
 }
