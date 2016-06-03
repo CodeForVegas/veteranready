@@ -20,7 +20,11 @@
 					<img src="/images/american_flag.jpg" class="img-responsive" alt="American Flag">
 					<p style="margin-top:57px;">A brief description, examples, and maybe a photo.</p>
 					<button type="button" id="allAgencies" class="btn btn-primary btn-block">View All</button>
-					<div id="allAgenciesResults"></div>
+					<div id="allAgenciesResults" class="hidden">
+						{{#each data.agency}}
+							<br />{{name}}
+						{{/each}}
+					</div>
 				</div>
 			</div>
 		</div>
@@ -33,7 +37,11 @@
 					<img src="/images/joe_heck2.jpg" class="img-responsive" alt="Joe Heck">
 					<p style="margin-top:3px;">A brief description, examples, and maybe a photo.</p>
 					<button type="button" id="allRepresentatives" class="btn btn-primary btn-block">View All</button>
-					<div id="allRepresentativesResults"></div>
+					<div id="allRepresentativesResults" class="hidden">
+						{{#each data.agency}}
+							<br />{{contactName}}
+						{{/each}}
+					</div>
 				</div>
 			</div>
 		</div>
@@ -46,7 +54,11 @@
 					<img src="/images/business_presentation.jpg" class="img-responsive" alt="Business Presentation">
 					<p style="margin-top:91px;">A brief description, examples, and maybe a photo.</p>
 					<button type="button" id="allServices" class="btn btn-primary btn-block">View All</button>
-					<div id="allServicesResults"></div>
+					<div id="allServicesResults" class="hidden">
+						{{#each data.agency}}
+							<br />{{topic}}
+						{{/each}}
+					</div>
 				</div>
 			</div>
 		</div>
@@ -59,7 +71,11 @@
 					<img src="/images/topic_map.png" class="img-responsive" alt="Topic Map">
 					<p style="margin-top:56px;">A brief description, examples, and maybe a photo.</p>
 					<button type="button" id="allTopics" class="btn btn-primary btn-block">View All</button>
-					<div id="allTopicsResults"></div>
+					<div id="allTopicsResults" class="hidden">
+						{{#each data.agency}}
+							<br />{{topic}}
+						{{/each}}
+					</div>
 				</div>
 			</div>
 		</div>
@@ -135,7 +151,11 @@
 	      <div id="topicResults" style="margin-bottom:10px;"></div>
 				<div class="text-center" style="margin-top:15px;">
 					<button type="button" id="customSearch" class="btn btn-primary btn-block">Custom Search</button>
-					<div id="customSearchResults"></div>
+					<div id="customSearchResults" class="hidden">
+						{{#each data.agency}}
+							<br />{{name}}
+						{{/each}}
+					</div>
 				</div>
 			</div>
 		</div>
@@ -146,23 +166,24 @@
 <script>
 $(document).ready(function () {
   $("#allAgencies").click(function() {
-    $("#allAgenciesResults").toggle().html("{{#each data.agency}}{{name}}<br />{{/each}}")
+    // $("#allAgenciesResults").toggle().html("{{#each data.agency}}{{name}}<br />{{/each}}")
+	$('#allAgenciesResults').toggleClass("hidden");
   });
 
   $("#allRepresentatives").click(function(){
-	$("#allRepresentativesResults").toggle().html("{{#each data.agency}}{{contactName}}<br />{{/each}}")
+	$("#allRepresentativesResults").toggleClass("hidden");
   });
 
   $("#allServices").click(function(){
-    $("#allServicesResults").toggle().html("{{#each data.agency}}{{topic}}<br />{{/each}}")
+    $("#allServicesResults").toggleClass("hidden");
   });
 
   $("#allTopics").click(function(){
-	$("#allTopicsResults").toggle().html("{{#each data.agency}}{{topic}}<br />{{/each}}")
+	$("#allTopicsResults").toggleClass("hidden");
   });
 
   $("#customSearch").click(function(){
-    $("#customSearchResults").toggle().html("{{#each data.agency}}{{name}}<br />{{/each}}")
+    $("#customSearchResults").toggleClass("hidden");
   });
 
   $("#gender").on("change", function(){
