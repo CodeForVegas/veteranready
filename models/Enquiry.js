@@ -18,7 +18,7 @@ Enquiry.add({
          { value: 'representative', label: 'Representing a Business or Organization'}
 	] },
   email: { type: Types.Email, required: true, match: /.+@.+\..+/, lowercase: true },
-	phone: { type: String},
+	phone: { type: Types.Text},
 	// match: /^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$/ },
 	enquiryType: { type: Types.Select, options: [
 		{ value: 'services', label: 'Our Services' },
@@ -27,7 +27,7 @@ Enquiry.add({
 		{ value: 'mentorship', label: 'Mentorship or Apprenticeship Opportunities' },
 		{ value: 'other', label: 'Something Else' }
 	] },
-	message: { type: Types.Markdown, required: true },
+	message: { type: Types.Textarea, required: true },
 	createdAt: { type: Date, default: Date(Date.now()) }
 });
 
