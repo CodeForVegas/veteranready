@@ -146,43 +146,43 @@
 <script>
 $(document).ready(function () {
   $("#allAgencies").click(function() {
-	  $("#allAgenciesResults").toggle().html("{{#each data.agency}}{{name}}<br />{{/each}}")
+    $("#allAgenciesResults").toggle().html("{{#each data.agency}}{{name}}<br />{{/each}}")
   });
 
-	$("#allRepresentatives").click(function(){
-		$("#allRepresentativesResults").toggle().html("{{#each data.agency}}{{contactName}}<br />{{/each}}")
-	});
+  $("#allRepresentatives").click(function(){
+	$("#allRepresentativesResults").toggle().html("{{#each data.agency}}{{contactName}}<br />{{/each}}")
+  });
 
-	$("#allServices").click(function(){
-		$("#allServicesResults").toggle().html("{{#each data.agency}}{{topic}}<br />{{/each}}")
-	});
+  $("#allServices").click(function(){
+    $("#allServicesResults").toggle().html("{{#each data.agency}}{{topic}}<br />{{/each}}")
+  });
 
-	$("#allTopics").click(function(){
-		$("#allTopicsResults").toggle().html("{{#each data.agency}}{{topic}}<br />{{/each}}")
-	});
+  $("#allTopics").click(function(){
+	$("#allTopicsResults").toggle().html("{{#each data.agency}}{{topic}}<br />{{/each}}")
+  });
 
-	$("#customSearch").click(function(){
-		$("#customSearchResults").toggle().html("{{#each data.agency}}{{name}}<br />{{/each}}")
-	});
+  $("#customSearch").click(function(){
+    $("#customSearchResults").toggle().html("{{#each data.agency}}{{name}}<br />{{/each}}")
+  });
 
   $("#gender").on("change", function(){
     var selected = $(this).val();
     $("#genderResults").html("You selected: " + selected);
   });
 
-	$("#serviceDecade").on("change", function(){
-		var selected = $(this).val();
-		$("#serviceDecadeResults").html("You selected: " + selected);
-	});
+  $("#serviceDecade").on("change", function(){
+    var selected = $(this).val();
+    $("#serviceDecadeResults").html("You selected: " + selected);
+  });
 
-	$("#county").on("change", function(){
-		var selected = $(this).val();
-		$("#countyResults").html("You selected: " + selected);
-	});
+  $("#county").on("change", function(){
+    var selected = $(this).val();
+	$("#countyResults").html("You selected: " + selected);
+  });
 
-	$("#topic").on("change", function(){
-		var selected = $(this).val();
-		$("#topicResults").html("You selected: " + selected);
-	});
+  $("#topic").on("change", function(){
+    var selected = $(this).val();
+	$("#topicResults").html("You selected: " + selected);
+  });
 });
 </script>
