@@ -19,12 +19,12 @@
 						<label><h4>Your Name</h4></label>
 						<input type="text" name="name.full" class="form-control" value="{{formData.[name.full]}}">
 					</div>
-					<div class="form-group {{#if validationErrors.groupType}}has-error{{/if}}">
+					<div class="form-group {{#if validationErrors.group}}has-error{{/if}}">
 						<label><h4>I am...</h4></label>
 						<select name="group" class="form-control">
 							<option value="">(select one)</option>
-							<option value="Veteran">An Individual Veteran</option>
-							<option value="Representative">Representing a Business or Organization</option>
+							<option value="veteran">An Individual Veteran</option>
+							<option value="representative">Representing a Business or Organization</option>
 						</select>
 					</div>
 					<div class="form-group {{#if validationErrors.email}}has-error{{/if}}">
