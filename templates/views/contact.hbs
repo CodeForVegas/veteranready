@@ -31,7 +31,7 @@
 						<label><h4>Your Email Address</h4></label>
 						<input type="email" name="email" class="form-control" value="{{formData.email}}">
 					</div>
-					<div class="form-group">
+					<div class="form-group {{#if validationErrors.phone}}has-error{{/if}}">
 						<label><h4>Your Phone Number</h4></label>
 						<input type="text" name="phone" placeholder="Please include area code" class="form-control" value="{{formData.phone}}">
 					</div>
