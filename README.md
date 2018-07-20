@@ -1,9 +1,3 @@
-To see a live demo of this application, go to:
-
-https://veteran-ready.herokuapp.com/
-
-and remember that Heroku's free tier requires a bit of patience.
-
 #### The database has already been built, but just for reference...
 #### To create the database, open a terminal, cd to the project directory, and type:
 
