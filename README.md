@@ -1,3 +1,8 @@
+## **This site has been mothballed, but you're welcome to clone or fork the repository**  
+
+# Veteran Ready
+## A Code for Vegas project to help U.S. Military Veterans network and find jobs.
+
 #### The database has already been built, but just for reference...
 #### To create the database, open a terminal, cd to the project directory, and type:
 
@@ -20,6 +25,8 @@
 #### Then go to the homepage.  Username is user@keystonejs.com and password is admin.
 
 #### Notes
+
+* This site runs on a very old and probably vulnerability-riddled version of Node (like pre 1.0), so be aware and don't bother using your current Node version either.
 
 1. This project is built using Keystone.js, which is a Node.js Content Management System and Web Application Platform. You can find out more at http://keystonejs.com/.
 
